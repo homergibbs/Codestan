@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Créer votre profil Codestan</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    .avatar-option {
+      display: inline-block;
+      margin: 10px;
+      border: 3px solid transparent;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: border 0.2s ease;
+    }
+
+    .avatar-option input[type="radio"] {
+      display: none;
+    }
+
+    .avatar-option.selected {
+      border-color: #28a745;
+    }
+
+    .avatar-option img {
+      height: 80px;
+      width: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body class="container text-center mt-5">
+  <h1 class="mb-4">C’est votre premier voyage au Codestan ? 🧳</h1>
+  <p class="lead">Remplissez les informations ci-dessous pour créer votre profil.</p>
+
+  <img src="{{ url_for('static', filename='img/agent-border.png') }}" alt="agent" class="img-fluid mb-4" style="max-height: 250px;">
+
+  <form method="POST" action="{{ url_for('register') }}" class="text-start" style="max-width: 600px; margin: auto;" autocomplete="off">
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Adresse e-mail :</label>
+      <input type="email" class="form-control" id="email" name="email" value="{{ email or '' }}" required autocomplete="off">
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Choisissez un mot de passe :</label>
+      <input type="password" class="form-control" id="password" name="password" required autocomplete="new-password">
+    </div>
+
+    <div class="mb-3">
+      <label for="avatar_name" class="form-label">Nom d’avatar (affiché dans l’app) :</label>
+      <input type="text" class="form-control" id="avatar_name" name="avatar_name" required autocomplete="off" placeholder="Ex : Capitaine Sécurité">
+    </div>
+
+    <div class="mb-3">
+      <label for="secret_question" class="form-label">Question secrète :</label>
+      <input type="text" class="form-control" id="secret_question" name="secret_question" placeholder="Ex : Le prénom de votre premier animal ?" required autocomplete="off">
+    </div>
+
+    <div class="mb-3">
+      <label for="secret_answer" class="form-label">Votre réponse :</label>
+      <input type="text" class="form-control" id="secret_answer" name="secret_answer" required autocomplete="off">
+    </div>
+
+    <!-- Avatar Grid Selection -->
+    <div class="mb-3 text-center">
+      <label class="form-label d-block">Choisissez un avatar :</label>
+      <div id="avatar-grid">
+        {% for avatar in avatars %}
+        <label class="avatar-option">
+          <input type="radio" name="avatar" value="{{ avatar }}" required>
+          <img src="{{ url_for('static', filename='avatars/' ~ avatar) }}" alt="avatar">
+        </label>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% if error %}
+      <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+
+    <div class="text-center mt-4">
+      <button type="submit" class="btn btn-success">Créer mon profil</button>
+    </div>
+  </form>
+
+  <script>
+    const avatarOptions = document.querySelectorAll('.avatar-option');
+    avatarOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        avatarOptions.forEach(opt => opt.classList.remove('selected'));
+        option.classList.add('selected');
+        option.querySelector('input').checked = true;
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Bienvenue au Codestan</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fc;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    .avatar-thumb {
+      height: 50px;
+      width: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <div class="row">
+    <!-- LEFT: Login block -->
+    <div class="col-12 col-md-8 text-center">
+      <h1 class="mb-4">Bienvenue au Codestan 🛂</h1>
+
+      <img src="{{ url_for('static', filename='ui/border_entry_codestan.png') }}"
+           alt="Entrée Codestan"
+           class="img-fluid rounded shadow-sm mb-4" style="max-height: 400px;">
+
+      <p class="lead text-center">
+        Connectez-vous pour entrer dans la zone d’entraînement.
+      </p>
+
+      <!-- Login form -->
+      <form method="POST" action="{{ url_for('login_email') }}" class="mt-4" style="max-width: 500px; margin: auto;">
+        <div class="mb-3 text-center">
+          <label for="email" class="form-label fs-5 text-center">Adresse e-mail</label>
+          <input type="email"
+                 class="form-control form-control-lg text-center"
+                 id="email"
+                 name="email"
+                 required
+                 autocomplete="email"
+                 placeholder="votre@email.com"
+                 autofocus>
+        </div>
+
+        <div class="mb-3 text-center">
+          <label for="password" class="form-label">Mot de passe</label>
+          <input type="password"
+                 class="form-control text-center"
+                 id="password"
+                 name="password"
+                 required
+                 autocomplete="current-password"
+                 placeholder="Entrez votre mot de passe">
+        </div>
+
+        {% if error %}
+          <div class="alert alert-danger text-center">{{ error }}</div>
+        {% endif %}
+
+        <div class="text-center mt-3">
+          <button type="submit" class="btn btn-success btn-lg w-100" style="max-width: 500px;">Se connecter</button>
+        </div>
+      </form>
+
+      <!-- Links under the form (still inside LEFT column) -->
+      <div class="text-center mt-3">
+        <a href="{{ url_for('register') }}" class="btn btn-outline-primary">Créer un nouveau compte</a>
+      </div>
+
+      <div class="text-center mt-2">
+        <a href="{{ url_for('forgot') }}" class="link-secondary">Mot de passe oublié ?</a>
+      </div>
+    </div>
+
+    <!-- RIGHT: Leaderboard / Stats -->
+    <div class="col-12 col-md-4 mt-4 mt-md-0">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title text-center">🏆 Classement général</h5>
+
+          <!-- Meilleur score -->
+          <div class="text-center mb-4 pb-3 border-bottom">
+            <p class="fw-bold mb-2">🥇 Meilleur score</p>
+            {% if top_score %}
+              <img src="{{ url_for('static', filename='avatars/' ~ top_score.avatar) }}" class="avatar-thumb mb-2" alt="">
+              <p>{{ top_score.name | capitalize }} — {{ top_score.score }} pts</p>
+            {% else %}
+              <p class="text-muted">Aucun score disponible</p>
+            {% endif %}
+          </div>
+
+          <!-- Meilleure série -->
+          <div class="text-center mb-4 pb-3 border-bottom">
+            <p class="fw-bold mb-2">🔥 Meilleure série</p>
+            {% if top_streak %}
+              <img src="{{ url_for('static', filename='avatars/' ~ top_streak.avatar) }}" class="avatar-thumb mb-2" alt="">
+              <p>{{ top_streak.name | capitalize }} — {{ top_streak.best_streak }} bonnes réponses</p>
+            {% else %}
+              <p class="text-muted">Aucune série disponible</p>
+            {% endif %}
+          </div>
+
+          <!-- Connexions consécutives -->
+          <div class="text-center">
+            <p class="fw-bold mb-2">📆 Connexions consécutives</p>
+            {% if top_login %}
+              <img src="{{ url_for('static', filename='avatars/' ~ top_login.avatar) }}" class="avatar-thumb mb-2" alt="">
+              <p>{{ top_login.name | capitalize }} — {{ top_login.login_streak }} jours</p>
+            {% else %}
+              <p class="text-muted">Aucune donnée</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /RIGHT -->
+  </div>
+</div>
+
+</body>
+</html>

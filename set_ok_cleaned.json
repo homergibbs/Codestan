@@ -1,0 +1,2700 @@
+[
+  {
+    "ID": "DUO011",
+    "theme": "Notions diverses",
+    "question": "La vitesse maximale autorisée sur autoroute en France pour les véhicules légers est de 130 km/h.",
+    "answers": {
+      "correct": [
+        "Vrai"
+      ],
+      "wrong": [
+        "Faux"
+      ]
+    },
+    "explication": "En France, la vitesse maximale autorisée sur autoroute pour les véhicules légers est de 130 km/h, sauf indication contraire.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "duo",
+    "timestamp": "2025-03-15 14:55:41",
+    "ai_learning_source": "validated_sets",
+    "ai_confidence_score": null,
+    "generation_time": 2.15
+  },
+  {
+    "ID": "PAN245",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Station essence avec GPL ouverte 24h sur 24 et 7 jours sur 7 "
+      ],
+      "wrong": [
+        "Station essence avec GPL ouverte uniquement en journée",
+        "Station essence ouverte uniquement en semaine",
+        "Station essence avec GPL réservée au poids-lourds"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": "/static/images/station_essence_7sur7_gpl.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-15 14:49:28",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM55",
+    "theme": "Le conducteur",
+    "question": "Le taux d'alcool à partir duquel un conducteur novice n'a pas le droit de conduire est de 0.4g par litre de sang",
+    "answers": {
+      "correct": [
+        "non"
+      ],
+      "wrong": [
+        "Oui"
+      ]
+    },
+    "explication": "Un conducteur novice est en infraction à partir de 0.2g par litre de sang",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-15 14:48:31",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "FREE028",
+    "theme": "Notions diverses",
+    "question": "Quel(s) usager(s) a le droit de priorité lorsqu'un piéton s'engage sur un passage protégé ?",
+    "answers": {
+      "correct": [
+        "Le piéton"
+      ],
+      "wrong": [
+        "Le cycliste",
+        "Le motard",
+        "Le conducteur de véhicule motorisé"
+      ]
+    },
+    "explication": "Le piéton bénéficie du droit de priorité lorsqu'il s'engage sur un passage protégé. Les autres usagers doivent donc lui laisser la priorité et s'arrêter pour le laisser traverser en toute sécurité.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-15 14:46:51",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.51
+  },
+  {
+    "ID": "KNO010",
+    "theme": "Notions diverses",
+    "question": "Que risque un conducteur en cas de contrôle s'il ne peut pas présenter son permis de conduire immédiatement ?",
+    "answers": {
+      "correct": [
+        "Une amende pouvant aller jusqu'à 38 euros"
+      ],
+      "wrong": [
+        "Une amende pouvant aller jusqu'à 138 euros",
+        "Une suspension de son permis de conduire",
+        "Une confiscation de son véhicule"
+      ]
+    },
+    "explication": "En cas de contrôle des forces de l'ordre, si le conducteur ne peut pas présenter son permis de conduire immédiatement, il risque une amende pouvant aller jusqu'à 38 euros.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "knowledge",
+    "timestamp": "2025-03-15 14:44:25",
+    "ai_learning_source": "knowledge_repository",
+    "ai_confidence_score": null,
+    "generation_time": 2.46
+  },
+  {
+    "ID": "PAN88",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Sens interdit"
+      ],
+      "wrong": [
+        "Circulation interdite",
+        "Fin de voie prioritaire",
+        "Route à double sens"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": "/static/images/sens_interdit.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-15 14:42:48",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "FREE029",
+    "theme": "Notions diverses",
+    "question": "QCM : En cas de panne sur la route, pour quitter mon véhicule en toute sécurité, je dois ",
+    "answers": {
+      "correct": [
+        "Mettre mon gilet de sécurité",
+        "Sortir du véhicule du côté opposé à la circulation"
+      ],
+      "wrong": [
+        "Rester dans le véhicule en attendant de l'aide",
+        "Sortir du véhicule et rester près de la portière",
+        "Faire des appels de phares pour prévenir les autres usagers"
+      ]
+    },
+    "explication": "Il est important de se garer sur le côté droit de la route, de mettre son gilet de sécurité et de sortir du véhicule du côté opposé à la circulation pour assurer sa propre sécurité.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-15 14:38:22",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.48
+  },
+  {
+    "ID": "QCM128",
+    "theme": "Prendre et quitter son véhicule",
+    "question": "Arrêt et stationnement sont 2 notions interchangeables",
+    "answers": {
+      "correct": [
+        "Faux"
+      ],
+      "wrong": [
+        "Vrai",
+        ""
+      ]
+    },
+    "explication": "L'arrêt est l'immobilisation momentanée du véhicule afin de permettre soit la montée/descente de passagers ou le chargement/déchargement du véhicule. Le conducteur doit rester près du véhicule. \nLe stationnement est toute immobilisation non liée à la montée/descente de personnes ou au chargement/déchargement. Immobiliser son véhicule pour acheter son pain, même pour une courte durée, correspond à un stationnement",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-15 14:35:47",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PAN117",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Accès interdit aux véhicules de transport en commun"
+      ],
+      "wrong": [
+        "Accès autorisé aux véhicules de transport en commun",
+        "Accès réservé aux véhicules de transport en commun",
+        "Danger : Sortie de véhicules de transport en commun"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": "/static/images/Acces_interdit_vehicules_transport_commun.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-15 14:33:19",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM96",
+    "theme": "Notions diverses",
+    "question": "Le plus souvent, les doses d'alcool servies sont plus importantes",
+    "answers": {
+      "correct": [
+        "à la maison"
+      ],
+      "wrong": [
+        "dans un bar",
+        "au restaurant",
+        "A un concert"
+      ]
+    },
+    "explication": "À la maison, les gens ont tendance à se servir des doses d'alcool plus importantes car ils ne sont pas soumis aux contrôles de quantité comme dans les bars ou les restaurants. De plus, ils peuvent être tentés de boire davantage dans un environnement plus détendu et familier.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-15 14:19:36",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PAN179",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Fin de vitesse conseilée de 70 km/h"
+      ],
+      "wrong": [
+        "Fin de limitation de vitesse de 70 km/h",
+        "Début de limitation de vitesse de 70 km/h",
+        "Vitesse minmale conseillée de 70km/h"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": "/static/images/fin_vitesse_conseillee.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-15 14:17:20",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "KNO008",
+    "theme": "Notions diverses",
+    "question": "Quel est le pourcentage des accidents mortels sur les autoroutes provoqués par la fatigue et l'assoupissement ?",
+    "answers": {
+      "correct": [
+        "30%"
+      ],
+      "wrong": [
+        "10%",
+        "20%",
+        "50%"
+      ]
+    },
+    "explication": "La fatigue et l'assoupissement sont responsables de 30% des accidents mortels sur les autoroutes, mettant en évidence l'importance de rester vigilant et reposé lors de la conduite.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "knowledge",
+    "timestamp": "2025-03-15 14:16:31",
+    "ai_learning_source": "knowledge_repository",
+    "ai_confidence_score": null,
+    "generation_time": 2.19
+  },
+  {
+    "ID": "DUO009",
+    "theme": "Notions diverses",
+    "question": "La limite légale de taux d'alcoolémie en France pour les conducteurs hors permis probatoire est de 0,5 gramme par litre de sang. Vrai ou Faux ?",
+    "answers": {
+      "correct": [
+        "Vrai"
+      ],
+      "wrong": [
+        "Faux"
+      ]
+    },
+    "explication": "En France, la limite légale de taux d'alcoolémie pour les conducteurs hors permis probatoire est en effet de 0,5 gramme par litre de sang. Au-delà de ce seuil, le conducteur est en infraction et risque des sanctions pénales et administratives.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "duo",
+    "timestamp": "2025-03-15 14:16:01",
+    "ai_learning_source": "validated_sets",
+    "ai_confidence_score": null,
+    "generation_time": 2.3
+  },
+  {
+    "ID": "FREE026",
+    "theme": "Notions diverses",
+    "question": "QCM : Quelle est la signification du terme \"voie de décélération\" sur une route ?",
+    "answers": {
+      "correct": [
+        "Une voie de décélération est une voie réservée pour ralentir et se diriger vers une sortie ou une bifurcation"
+      ],
+      "wrong": [
+        "Une voie de décélération est une voie où la vitesse est limitée à 110 km/h",
+        "Une voie de décélération est une voie réservée aux véhicules prioritaires",
+        "Une voie de décélération est une voie réservée aux véhicules munis d'une remorque"
+      ]
+    },
+    "explication": "Une voie de décélération est une partie de la route qui permet aux conducteurs de ralentir progressivement et de se diriger vers une sortie ou une bifurcation sans gêner la circulation sur les voies principales.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-15 14:14:47",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.7
+  },
+  {
+    "ID": "PAN323",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Passage à niveau à plusieurs voies sans barrière"
+      ],
+      "wrong": [
+        "Passage à niveau avec barrière",
+        "Passage à niveau à une seule voie",
+        "Passage à niveau sans voie"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "difficile",
+    "image_path": "/static/images/passage_niveau_plusieurs_voies.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-15 14:10:54",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "KNO007",
+    "theme": "Notions diverses",
+    "question": "Quel est le délai d'attente nécessaire pour repasser le permis de conduire après avoir perdu tous ses points et suivi un stage de sensibilisation à la sécurité routière ?",
+    "answers": {
+      "correct": [
+        "6 mois"
+      ],
+      "wrong": [
+        "3 mois",
+        "9 mois",
+        "1 an"
+      ]
+    },
+    "explication": "Après avoir perdu tous ses points et suivi un stage de sensibilisation à la sécurité routière, le titulaire du permis de conduire doit attendre un délai de six mois avant de pouvoir le repasser.",
+    "comment": "",
+    "difficulty": "difficile",
+    "image_path": null,
+    "source": "knowledge",
+    "timestamp": "2025-03-15 14:10:39",
+    "ai_learning_source": "knowledge_repository",
+    "ai_confidence_score": null,
+    "generation_time": 2.44
+  },
+  {
+    "ID": "FREE025",
+    "theme": "Notions diverses",
+    "question": "QCM : Quelle est la vitesse maximale autorisée sur une route à double sens sans séparateur central en agglomération en France ?",
+    "answers": {
+      "correct": [
+        "50 km/h"
+      ],
+      "wrong": [
+        "30 km/h",
+        "70 km/h",
+        "90 km/h"
+      ]
+    },
+    "explication": "En France, la vitesse maximale autorisée sur une route à double sens sans séparateur central en agglomération est de 50 km/h.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-15 14:09:30",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.06
+  },
+  {
+    "ID": "QCM117",
+    "theme": "Prendre et quitter son véhicule",
+    "question": "Lors de mon installation dans le véhicule, je règle en premier :",
+    "answers": {
+      "correct": [
+        "Le siège"
+      ],
+      "wrong": [
+        "Les rétroviseurs",
+        "Le volant",
+        "La température"
+      ]
+    },
+    "explication": "Il est important de régler le siège en premier pour s'assurer d'avoir une position confortable et adaptée à sa morphologie. Une bonne position de conduite permet d'avoir une meilleure visibilité sur la route, de faciliter l'accès aux commandes du véhicule et de réduire la fatigue lors de longs trajets. Cela contribue également à la sécurité en permettant une meilleure réactivité en cas de situation d'urgence.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-15 13:54:28",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PAN299",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Réserve naturelle"
+      ],
+      "wrong": [
+        "Parc d'attractions",
+        "Zoo",
+        "Jardin public"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "difficile",
+    "image_path": "/static/images/reserve_naturelle.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-15 13:53:52",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "FREE024",
+    "theme": "Notions diverses",
+    "question": "Quelle est la vitesse maximale autorisée sur une autoroute en France ?",
+    "answers": {
+      "correct": [
+        "130 km/h"
+      ],
+      "wrong": [
+        "150 km/h",
+        "110 km/h",
+        "120 km/h"
+      ]
+    },
+    "explication": "En France, la vitesse maximale autorisée sur une autoroute est de 130 km/h par temps sec. Cependant, cette limitation peut varier en fonction des conditions météorologiques ou de certaines réglementations locales.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-15 13:53:12",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.24
+  },
+  {
+    "ID": "KNO003",
+    "theme": "Notions diverses",
+    "question": "Quels sont les équipements de sécurité obligatoires à bord d'un véhicule motorisé en France pour assurer la sécurité en cas d'arrêt d'urgence sur la route ?",
+    "answers": {
+      "correct": [
+        "Un gilet de haute visibilité",
+        "Un triangle de pré-signalisation"
+      ],
+      "wrong": [
+        "Un parapluie",
+        "Des jumelles",
+        "Une roue de secours"
+      ]
+    },
+    "explication": "En France, il est obligatoire d'avoir à bord d'un véhicule motorisé un gilet de haute visibilité et un triangle de pré-signalisation en cas d'arrêt d'urgence sur la route. Ces équipements sont essentiels pour assurer la sécurité en cas de panne ou d'accident.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "knowledge",
+    "timestamp": "2025-03-15 13:43:06",
+    "ai_learning_source": "knowledge_repository",
+    "ai_confidence_score": null,
+    "generation_time": 4.22
+  },
+  {
+    "ID": "INP009",
+    "theme": "Notions diverses",
+    "question": "Quand se forme le verglas ?",
+    "answers": {
+      "correct": [
+        "Lorsque la température extérieure est inférieure ou égale à 0°C"
+      ],
+      "accepted": [],
+      "wrong": [
+        "Lorsque la température extérieure est inférieure ou égale à -10°C",
+        "Lorsque la température extérieure est inférieure ou égale à 5°C",
+        "Le cumul d'un temps pluvieux et de vents forts"
+      ]
+    },
+    "explication": "Le verglas se forme lorsque la température extérieure est inférieure ou égale à 0oC, surtout si l'air est humide.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "input",
+    "timestamp": "2025-03-15 13:40:50",
+    "ai_learning_source": "books",
+    "ai_confidence_score": null,
+    "generation_time": 2.38
+  },
+  {
+    "ID": "QCM34",
+    "theme": "La route",
+    "question": "Par temps de pluie je peux utiliser les feux de brouillard avant",
+    "answers": {
+      "correct": [
+        "oui"
+      ],
+      "wrong": [
+        "Non"
+      ]
+    },
+    "explication": "Les feux de brouillard avant peuvent être utilisés en cas de forte pluie pour améliorer la visibilité des autres usagers de la route. Cela permet de mieux signaler sa présence et de réduire les risques d'accident.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-15 13:40:10",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "FREE022",
+    "theme": "Notions diverses",
+    "question": "QCM : Quelles actions contribuent à la préservation de l'environnement lors de la conduite d'un véhicule ?",
+    "answers": {
+      "correct": [
+        "Privilégier le covoiturage",
+        "Adopter une conduite souple"
+      ],
+      "wrong": [
+        "Augmenter sa vitesse pour consommer moins de carburant",
+        "Ouvrir les fenêtres du véhicule",
+        "Sous-gonfler les pneus"
+      ]
+    },
+    "explication": "Privilégier le covoiturage permet de réduire le nombre de véhicules sur la route, diminuant ainsi les émissions de gaz à effet de serre. Adopter une conduite souple et anticipative permet de réduire la consommation de carburant et les émissions de CO2.",
+    "comment": "améliorer mauvaises réponses",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-15 13:37:21",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.74
+  },
+  {
+    "ID": "QCM109",
+    "theme": "Premiers secours",
+    "question": "Avant d'utiliser un DAE (Défibrilateur Automatisé Externe), je dois suivre une formation",
+    "answers": {
+      "correct": [
+        "non"
+      ],
+      "wrong": [
+        "Oui"
+      ]
+    },
+    "explication": "La formation n'est pas obligatoire pour utiliser un DAE car cet appareil est conçu pour être utilisé par des personnes non formées en cas d'urgence. Les instructions sont généralement simples et guidées vocalement pour permettre à n'importe qui de l'utiliser efficacement.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-15 13:30:17",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PAN42",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Passage piétons surélevé"
+      ],
+      "wrong": [
+        "Passage pour piétons",
+        "Col à proximité",
+        "Passage pour animaux"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": "/static/images/passage_pieton_sureleve.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-15 13:29:30",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PAN51",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Virage à droite"
+      ],
+      "wrong": [
+        "Succession de virages dangereux",
+        "Intersection à droite",
+        "Changement de voie"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": "/static/images/virage_a_droite.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-15 13:21:06",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "FREE017",
+    "theme": "Notions diverses",
+    "question": "QCM : Une route à chaussées séparée",
+    "answers": {
+      "correct": [
+        "Comporte au moins deux voies de circulation séparées par un terre-plein central"
+      ],
+      "wrong": [
+        "Est exclusivement réservée aux véhicules légers",
+        "Est obligatoirement limitée à 50 km/h",
+        "Comporte obligatoirement des feux de signalisation"
+      ]
+    },
+    "explication": "Une route à chaussées séparées est une route comportant au moins deux voies de circulation séparées par un terre-plein central pour garantir la sécurité des usagers en évitant les collisions frontales.",
+    "comment": "réponses peu claires",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-14 17:54:30",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.75
+  },
+  {
+    "ID": "QCM97",
+    "theme": "Notions diverses",
+    "question": "Quels sont les documents obligatoires à présenter en cas de contrôle par les forces de l’ordre ?",
+    "answers": {
+      "correct": [
+        "Carte grise",
+        "Permis de conduire"
+      ],
+      "wrong": [
+        "Attestation d'assurance",
+        "Attestation contrôle technique"
+      ]
+    },
+    "explication": "La carte grise est un document obligatoire à présenter en cas de contrôle par les forces de l'ordre car elle atteste de la propriété du véhicule et de son immatriculation. Le permis de conduire (définitif ou provisoire doit aussi être présenté sur demande). Depuis le 1er avril 2024, il n'est plus obligatoire de présenter l'attestation d'assurance (les forces de l'ordre consultent directement les fichier des véhicules assurés (FVA)",
+    "comment": "changer réponses",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-14 17:50:31",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PDF93BIB146",
+    "theme": "Notions diverses",
+    "question": "De manière générale, les zones fréquentées par des enfants, des personnes âgées ou des personnes handicapées  ?",
+    "answers": {
+      "correct": [
+        "Par un panneau"
+      ],
+      "wrong": [
+        "Par un feu tricolore",
+        "Par un marquage au sol",
+        "Par la présence des forces de l'ordre"
+      ]
+    },
+    "explication": "Les zones fréquentées par des enfants, les personnes âgées et les personnes handicapées sont généralement signalées par un panneau.",
+    "comment": "Pas clair",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "pdf",
+    "timestamp": "2025-03-14 17:43:12",
+    "ai_learning_source": "books",
+    "pdf_details": {
+      "book": "Bible",
+      "pages_used": [
+        146,
+        147,
+        148
+      ]
+    },
+    "ai_confidence_score": null,
+    "generation_time": 2.51
+  },
+  {
+    "ID": "PAN106",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Entrée dans une zone à stationnement unilatéral à alternance semi-mensuelle, avec contrôle par disque"
+      ],
+      "wrong": [
+        "Fin de zone à stationnement unilatéral à alternance semi-mensuelle, avec contrôle par disque",
+        "Entrée dans une zone à stationnement unilatéral sans alternance semi-mensuelle, avec contrôle par disque",
+        "Entrée dans une zone à stationnement réservé aux riverains",
+        ""
+      ]
+    },
+    "explication": "",
+    "comment": "changer mauvaises réponses",
+    "difficulty": "difficile",
+    "image_path": "/static/images/stationnement_unilateral_bimensuel_controle_disque.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-14 17:39:43",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "DUO006",
+    "theme": "Notions diverses",
+    "question": "Le permis BE est-il obligatoire pour tracter une remorque dont la somme des PTAC (véhicule + remorque) dépasse 4 250 kg ?",
+    "answers": {
+      "correct": [
+        "Oui"
+      ],
+      "wrong": [
+        "Non"
+      ]
+    },
+    "explication": "Selon le Code de la Route français, passer le permis BE est obligatoire si la somme des PTAC (véhicule + remorque) dépasse 4 250 kg.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "duo",
+    "timestamp": "2025-03-14 17:17:07",
+    "ai_learning_source": "books",
+    "ai_confidence_score": null,
+    "generation_time": 2.68
+  },
+  {
+    "ID": "QCM57",
+    "theme": "Le conducteur",
+    "question": "A partir de quel taux d'alcoolémie conduire représente un délit et un risque d'emprisonnement",
+    "answers": {
+      "correct": [
+        "0.8g/litre de sang"
+      ],
+      "wrong": [
+        "0.5g/litre de sang",
+        "1.0g/litre de sang",
+        "1.5g/litre de sang"
+      ]
+    },
+    "explication": "En France, le taux d'alcoolémie légal pour conduire est de 0.5g/litre de sang. Au-delà de 0.8g/litre de sang, conduire sous l'empire d'un état alcoolique est considéré comme un délit, passible d'une peine de prison et d'une amende importante. ",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-14 17:01:44",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PAN209",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Section de route à trois voies"
+      ],
+      "wrong": [
+        "Je circule sur une voie prioritaire",
+        "Les véhicules arrivant face à moi circulent sur une voie prioritaire",
+        "Demi-tour autorisé"
+      ]
+    },
+    "explication": "",
+    "comment": "changer les réponses",
+    "difficulty": "facile",
+    "image_path": "/static/images/section_route_3_voies_2_et_1.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-14 16:58:52",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PDF61PLN465",
+    "theme": "Notions diverses",
+    "question": "Que dois-je impérativement faire avant de quitter mon véhicule sur la bande d'arrêt d'urgence d'une autoroute?",
+    "answers": {
+      "correct": [
+        "Mettre mon gilet de sécurité"
+      ],
+      "wrong": [
+        "Appeler les secours",
+        "Remonter les vitres de mon véhicule",
+        "Verrouiller l'accès au coffre"
+      ]
+    },
+    "explication": "Avant de quitter son véhicule sur la bande d'arrêt d'urgence d'une autoroute, il est impératif de mettre son gilet de sécurité pour être bien visible et en sécurité.",
+    "comment": "améliorer mauvaises réponses",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "pdf",
+    "timestamp": "2025-03-14 16:33:37",
+    "ai_learning_source": "books",
+    "pdf_details": {
+      "book": "PLN",
+      "pages_used": [
+        465,
+        466,
+        467
+      ]
+    },
+    "ai_confidence_score": null,
+    "generation_time": 2.84
+  },
+  {
+    "ID": "PAN300",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Monument historique"
+      ],
+      "wrong": [
+        "Site touristique",
+        "Monument commémoratif",
+        "Zone de loisirs"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": "/static/images/monument_historique.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-14 16:32:55",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PAN126",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Vitesse limitée à 50 km/h"
+      ],
+      "wrong": [
+        "Fin de vitesse limitée à 50 km/h",
+        "Vitesse minimum de 50 km/h"
+      ]
+    },
+    "explication": "",
+    "comment": "améliorer mauvaises réponses (utiliser la même vitesse)",
+    "difficulty": "facile",
+    "image_path": "/static/images/vitesse_limite_50.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-14 16:31:13",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "FREE023",
+    "theme": "Notions diverses",
+    "question": "QCM : Qu'est-ce que le temps de réaction d'un conducteur au volant d'un véhicule ?",
+    "answers": {
+      "correct": [
+        "Le temps nécessaire entre la perception d'un danger et la réaction du conducteur"
+      ],
+      "wrong": [
+        "Le temps nécessaire pour percevoir un danger",
+        "Le temps maximal de conduite sans pause",
+        "La distance entre le début du freinage et l'arrêt effectif du véhicule"
+      ]
+    },
+    "explication": "Le temps de réaction d'un conducteur au volant d'un véhicule correspond au laps de temps nécessaire entre la perception d'un danger sur la route et la réaction du conducteur pour éviter ou gérer la situation.",
+    "comment": "améliorer les réponses",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-14 15:44:20",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.31
+  },
+  {
+    "ID": "FREE021",
+    "theme": "Notions diverses",
+    "question": "Quels sont les usagers de la route considérés comme vulnérables ?",
+    "answers": {
+      "correct": [
+        "Les piétons",
+        "Les cyclistes"
+      ],
+      "wrong": [
+        "Les conducteurs de poids lourds",
+        "Les conducteurs de véhicules prioritaires",
+        "Les conducteurs de motos"
+      ]
+    },
+    "explication": "Les piétons et les cyclistes sont considérés comme des usagers vulnérables car ils sont moins protégés en cas d'accident par rapport aux conducteurs de véhicules motorisés.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-14 15:34:15",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.84
+  },
+  {
+    "ID": "FREE020",
+    "theme": "Notions diverses",
+    "question": "QCM : Quelle est la signification des lignes blanches continues sur la chaussée ?",
+    "answers": {
+      "correct": [
+        "Il est interdit de franchir ces lignes"
+      ],
+      "wrong": [
+        "Elles indiquent une voie de circulation réservée aux véhicules lents",
+        "Elles signalent une voie de bus",
+        "Elles permettent de changer de voie librement"
+      ]
+    },
+    "explication": "Les lignes blanches continues sur la chaussée indiquent qu'il est interdit de franchir ces lignes, sauf en cas de nécessité comme un obstacle sur la voie ou une manoeuvre de dépassement autorisée. Il est important de respecter ces marquages pour garantir la sécurité de tous les usagers de la route.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-14 15:33:21",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 3.33
+  },
+  {
+    "ID": "QCM73",
+    "theme": "Mécanique et équipements",
+    "question": "Pourquoi est-il préférable d’utiliser un liquide lave-glace spécial en hiver ?",
+    "answers": {
+      "correct": [
+        "Pour éviter le gel du liquide"
+      ],
+      "wrong": [
+        "Pour améliorer la visibilité lors des tempêtes de neige",
+        "Pour augmenter la durée de vie du moteur en hiver",
+        "Pour éviter la surchauffe du liquide lave-glace"
+      ]
+    },
+    "explication": "En hiver, les températures peuvent descendre en dessous de zéro, ce qui peut provoquer le gel du liquide lave-glace ordinaire. En utilisant un liquide spécial hiver, celui-ci contient des additifs antigel qui empêchent le liquide de geler, assurant ainsi une visibilité optimale même par temps froid.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-11 22:02:03",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PDF76PLN631",
+    "theme": "Notions diverses",
+    "question": "Quel est l'impact de l'encrassement du filtre à air sur la consommation de carburant d'un véhicule ?",
+    "answers": {
+      "correct": [
+        "Une surconsommation d'environ 3%"
+      ],
+      "wrong": [
+        "Une réduction de la consommation de carburant",
+        "Aucun impact sur la consommation de carburant",
+        "Une surconsommation d'environ 10%"
+      ]
+    },
+    "explication": "L'encrassement du filtre à air entraîne une surconsommation de carburant d'environ 3%.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "pdf",
+    "timestamp": "2025-03-11 21:59:47",
+    "ai_learning_source": "books",
+    "pdf_details": {
+      "book": "PLN",
+      "pages_used": [
+        631,
+        632,
+        633
+      ]
+    },
+    "ai_confidence_score": null,
+    "generation_time": 3.75
+  },
+  {
+    "ID": "PAN132",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Accès interdit aux véhicules transportant des marchandises susceptibles de polluer les eaux"
+      ],
+      "wrong": [
+        "Accès interdit aux véhicules surchargés",
+        "Accès interdit aux véhicules transportant des déchets toxiques",
+        "Accès interdit aux véhicules transportant des matières dangereuses"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": "/static/images/acces_interdit_vehicules_materiaux_polluant_eau.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-11 21:56:06",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM63",
+    "theme": "Le conducteur",
+    "question": "Je suis responsable d'un accident. Si je suis sous l'emprise du cannabis ou de l'alcool, l'assurance peut résilier mon contrat",
+    "answers": {
+      "correct": [
+        "oui"
+      ],
+      "wrong": [
+        "Non"
+      ]
+    },
+    "explication": "En cas d'accident sous l'emprise du cannabis ou de l'alcool, l'assurance peut résilier le contrat car ces substances sont considérées comme des facteurs aggravants de risque. L'assurance peut donc décider de mettre fin au contrat, notamment pour non-respect des conditions de souscription mentionnées dans le contrat d'assurance.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-11 21:54:33",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PAN182",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Emplacement d'arrêt d'urgence"
+      ],
+      "wrong": [
+        "Zone de stationnement poids-lourds",
+        "Aire de repos",
+        "Parking public"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": "/static/images/emplacement_arret_urgence.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-11 21:53:01",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM05",
+    "theme": "Les autres usagers",
+    "question": "La catégorie de piétons la plus vulnérable est",
+    "answers": {
+      "correct": [
+        "les personnes âgées"
+      ],
+      "wrong": [
+        "les enfants",
+        "les personnes handicapées",
+        ""
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-11 15:24:12",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PAN226",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Début d'une section d'autoroute"
+      ],
+      "wrong": [
+        "Fin d'une section d'autoroute",
+        "Entrée d'une zone de chantier",
+        "Pont traversant la voie"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": "/static/images/debut_section_autoroute.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-11 15:23:22",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "KNO006",
+    "theme": "Notions diverses",
+    "question": "Quelle est la principale conséquence de la consommation d'alcool sur la conduite d'un véhicule?",
+    "answers": {
+      "correct": [
+        "Diminution des réflexes"
+      ],
+      "wrong": [
+        "Augmentation de la fatigue",
+        "Altération de la vision"
+      ]
+    },
+    "explication": "La consommation d'alcool entraîne une diminution des réflexes et une altération de la vision, ce qui peut affecter gravement la capacité du conducteur à réagir rapidement et à percevoir correctement son environnement, augmentant ainsi le risque d'accident.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "knowledge",
+    "timestamp": "2025-03-11 15:19:37",
+    "ai_learning_source": "knowledge_repository",
+    "ai_confidence_score": null,
+    "generation_time": 3.51
+  },
+  {
+    "ID": "QCM14",
+    "theme": "La circulation routière",
+    "question": "En tant que conducteur novice, ma vitesse est limitée à 110Km/h sur autoroute",
+    "answers": {
+      "correct": [
+        "oui"
+      ],
+      "wrong": [
+        "Non"
+      ]
+    },
+    "explication": "En France, les conducteurs novices avec moins de 3 ans de permis ont une limitation de vitesse à 110Km/h sur autoroute, alors que les conducteurs expérimentés peuvent rouler à 130Km/h. Cette mesure vise à renforcer la sécurité routière pour les conducteurs les moins expérimentés.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-11 15:19:22",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PDF88PLN614",
+    "theme": "Notions diverses",
+    "question": "Quelle est la règle de priorité concernant les tramways par rapport à tous les autres usagers de la route ?",
+    "answers": {
+      "correct": [
+        "Les tramways sont prioritaires sur tous les autres usagers."
+      ],
+      "wrong": [
+        "Les tramways doivent céder le passage aux piétons.",
+        "Les tramways doivent céder le passage à tous les autres usagers."
+      ]
+    },
+    "explication": "Les tramways sont prioritaires sur tous les autres usagers de la route, mais doivent tout de même respecter les feux, signaux des agents et l'arrêt au signal stop.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "pdf",
+    "timestamp": "2025-03-11 15:18:15",
+    "ai_learning_source": "books",
+    "pdf_details": {
+      "book": "PLN",
+      "pages_used": [
+        614,
+        615,
+        616
+      ]
+    },
+    "ai_confidence_score": null,
+    "generation_time": 3.56
+  },
+  {
+    "ID": "INP005",
+    "theme": "Notions diverses",
+    "question": "Les chances de survie d'un piéton heurté à 70Km/h sont proches de ",
+    "answers": {
+      "correct": [
+        "0%"
+      ],
+      "accepted": [],
+      "wrong": [
+        "40%",
+        "10%",
+        "20%\t"
+      ]
+    },
+    "explication": "À une vitesse de 70Km/h, les chances de survie d'un piéton heurté sont proches de 0.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "input",
+    "timestamp": "2025-03-11 15:17:00",
+    "ai_learning_source": "inspired_by_qcm",
+    "ai_confidence_score": null,
+    "generation_time": 2.36
+  },
+  {
+    "ID": "QCM34",
+    "theme": "La route",
+    "question": "Par temps de pluie je peux utiliser les feux de brouillard avant",
+    "answers": {
+      "correct": [
+        "oui"
+      ],
+      "wrong": [
+        "Non"
+      ]
+    },
+    "explication": "En cas de pluie, les feux de brouillard avant peuvent être utilisés pour améliorer la visibilité, notamment pour être mieux vu par les autres usagers de la route. Cela permet de réduire les risques d'accident en augmentant la visibilité de son véhicule.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-11 15:16:39",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PDF37BIB191",
+    "theme": "Notions diverses",
+    "question": "Sur quel principe repose le freinage ?",
+    "answers": {
+      "correct": [
+        "Le freinage repose sur le frottement"
+      ],
+      "wrong": [
+        "Le freinage repose sur la pression du liquide de freins",
+        "Le freinage repose sur la résistance au vent",
+        "Le freinage repose sur la transmission hydraulique"
+      ]
+    },
+    "explication": "Le texte indique que le principe du freinage dans un véhicule repose sur le frottement, qui ralentit le véhicule en transformant l’énergie accumulée en chaleur.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "pdf",
+    "timestamp": "2025-03-11 15:15:17",
+    "ai_learning_source": "books",
+    "pdf_details": {
+      "book": "Bible",
+      "pages_used": [
+        191,
+        192,
+        193
+      ]
+    },
+    "ai_confidence_score": null,
+    "generation_time": 3.36
+  },
+  {
+    "ID": "PDF91PLN423",
+    "theme": "Notions diverses",
+    "question": "Quel véhicule doit s'arrêter en premier pour faciliter le passage lors d'un croisement difficile sur une route en pente, que ce soit en montant ou en descendant?",
+    "answers": {
+      "correct": [
+        "Le véhicule qui descend"
+      ],
+      "wrong": [
+        "Le véhicule qui monte",
+        "Le véhicule le plus large",
+        "Le véhicule le plus long"
+      ]
+    },
+    "explication": "Lors d'un croisement difficile sur une route en pente, c'est le véhicule qui descend qui doit s'arrêter en premier pour faciliter le passage à celui qui monte.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "pdf",
+    "timestamp": "2025-03-11 15:13:27",
+    "ai_learning_source": "books",
+    "pdf_details": {
+      "book": "PLN",
+      "pages_used": [
+        423,
+        424,
+        425
+      ]
+    },
+    "ai_confidence_score": null,
+    "generation_time": 3.1
+  },
+  {
+    "ID": "PAN224",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Fin d'une voie verte - réservée aux piétons et véhicules non motorisés"
+      ],
+      "wrong": [
+        "Début d'une voie verte - réservée aux piétons et véhicules non motorisés",
+        "Fin d'une voie réservée aux véhicules motorisés",
+        "Début d'une voie réservée aux cyclistes uniquement"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": "/static/images/fin_voie_verte.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-11 15:10:39",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "INP003",
+    "theme": "Notions diverses",
+    "question": "En l'absence de passage piétons, qui a la priorité entre un piéton montrant clairement son intention de traverser et les voitures ?",
+    "answers": {
+      "correct": [
+        "Le piéton"
+      ],
+      "accepted": [],
+      "wrong": [
+        "Les voitures"
+      ]
+    },
+    "explication": "En l'absence de passage piétons, un piéton montrant clairement son intention de traverser a la priorité sur les voitures qui doivent s'arrêter pour le laisser passer.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "input",
+    "timestamp": "2025-03-11 15:09:50",
+    "ai_learning_source": "inspired_by_culture_generale",
+    "ai_confidence_score": null,
+    "generation_time": 3.39
+  },
+  {
+    "ID": "PDF65BIB215",
+    "theme": "Notions diverses",
+    "question": "Quel est le délai d'attente nécessaire pour repasser le permis de conduire après avoir perdu tous ses points et suivi un stage de sensibilisation à la sécurité routière ?",
+    "answers": {
+      "correct": [
+        "6 mois"
+      ],
+      "wrong": [
+        "3 mois",
+        "9 mois",
+        "1 an"
+      ]
+    },
+    "explication": "Après avoir perdu tous ses points et suivi un stage de sensibilisation à la sécurité routière, le titulaire du permis de conduire doit attendre un délai de six mois avant de pouvoir le repasser.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "pdf",
+    "timestamp": "2025-03-11 15:08:44",
+    "ai_learning_source": "books",
+    "pdf_details": {
+      "book": "Bible",
+      "pages_used": [
+        215,
+        216,
+        217
+      ]
+    },
+    "ai_confidence_score": null,
+    "generation_time": 3.38
+  },
+  {
+    "ID": "DUO003",
+    "theme": "Notions diverses",
+    "question": "0.10 mg/l d'air expiré correspond à 0.2g par litre de sang. Vrai ou faux ?",
+    "answers": {
+      "correct": [
+        "Vrai"
+      ],
+      "wrong": [
+        "Faux"
+      ]
+    },
+    "explication": "Vrai. En France, le taux d'alcoolémie est mesuré en grammes par litre de sang (g/L) et en milligrammes par litre d'air expiré (mg/L). Un taux de 0.10 mg/l d'air expiré correspond à 0.2g par litre de sang.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "duo",
+    "timestamp": "2025-03-11 15:08:13",
+    "ai_learning_source": "culture_generale",
+    "ai_confidence_score": null,
+    "generation_time": 2.7
+  },
+  {
+    "ID": "FREE014",
+    "theme": "Notions diverses",
+    "question": "Que doit faire un conducteur lorsqu'il voit un piéton s'engager sur un passage piéton ?",
+    "answers": {
+      "correct": [
+        "S'arrêter pour lui laisser le passage"
+      ],
+      "wrong": [
+        "Accélérer pour le devancer",
+        "Klaxonner pour signaler sa présence",
+        "Adapter son comportement en fonction de la situation"
+      ]
+    },
+    "explication": "Un conducteur doit ralentir et s'arrêter pour laisser passer un piéton qui s'engage sur un passage piéton.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-11 15:06:15",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.47
+  },
+  {
+    "ID": "QCM19",
+    "theme": "La circulation routière",
+    "question": "Je peux m'arrêter en double-file pour déposer des passagers",
+    "answers": {
+      "correct": [
+        "Non"
+      ],
+      "wrong": [
+        "Oui"
+      ]
+    },
+    "explication": "Il est interdit de s'arrêter en double-file pour déposer des passagers car cela crée une gêne pour la circulation et peut être dangereux pour les autres usagers de la route. Il est préférable de trouver un emplacement de stationnement autorisé pour déposer des passagers en toute sécurité.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-11 14:40:49",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PDF69PLN243",
+    "theme": "Notions diverses",
+    "question": "Quelle est l'incidence de la présence de verglas sur l'adhérence des pneumatiques ?",
+    "answers": {
+      "correct": [
+        "L'adhérence est quasiment nulle sur du verglas"
+      ],
+      "wrong": [
+        "L'adhérence est réduite de moitié",
+        "L'adhérence est divisée par 4"
+      ]
+    },
+    "explication": "L'adhérence est quasiment nulle sur du verglas, ce qui signifie que les pneumatiques ont une très faible capacité à adhérer à ce type de surface glissante.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "pdf",
+    "timestamp": "2025-03-11 14:40:31",
+    "ai_learning_source": "books",
+    "pdf_details": {
+      "book": "PLN",
+      "pages_used": [
+        243,
+        244,
+        245
+      ]
+    },
+    "ai_confidence_score": null,
+    "generation_time": 3.3
+  },
+  {
+    "ID": "DUO002",
+    "theme": "Notions diverses",
+    "question": "Les traits composant le marquage d'avertissement lorsque les lignes de séparation des voies sont discontinues ont une longueur de 3 mètres.",
+    "answers": {
+      "correct": [
+        "Faux"
+      ],
+      "wrong": [
+        "Vrai"
+      ]
+    },
+    "explication": "En France, les traits composant le marquage d'avertissement lorsque les lignes de séparation des voies sont discontinues ont une longueur de 2 mètres.",
+    "comment": "",
+    "difficulty": "difficile",
+    "image_path": null,
+    "source": "duo",
+    "timestamp": "2025-03-11 14:39:42",
+    "ai_learning_source": "validated_sets",
+    "ai_confidence_score": null,
+    "generation_time": 2.1
+  },
+  {
+    "ID": "QCM123",
+    "theme": "La sécurité",
+    "question": "En cas d'accident, la ceinture de sécurité :",
+    "answers": {
+      "correct": [
+        "Evite d'être éjecté du véhicule",
+        "Limite les blessures"
+      ],
+      "wrong": [
+        "Empêche les passagers d'évacuer facilement",
+        "Risque de provoquer des blessures graves",
+        "Ne sert à rien en cas de choc frontal"
+      ]
+    },
+    "explication": "En cas d'accident, la ceinture de sécurité évite d'être éjecté du véhicule et limite les blessures. Elle n'empêche surtout pas d'évacuer. Attention à cette idée reçue qui est fausse !",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-11 14:39:13",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM102",
+    "theme": "Notions diverses",
+    "question": "Tuer une personne lors d'un accident de conduite constitue un délit d'homicide involontaire",
+    "answers": {
+      "correct": [
+        "oui"
+      ],
+      "wrong": [
+        "Non"
+      ]
+    },
+    "explication": "Selon le Code de la Route français, causer la mort d'une personne lors d'un accident de conduite en raison d'une imprudence, d'une négligence ou d'une violation des règles de circulation constitue un délit d'homicide involontaire. Cela peut entraîner des poursuites judiciaires et des sanctions pénales, telles que des amendes et des peines de prison.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-11 14:37:33",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "KNO004",
+    "theme": "Notions diverses",
+    "question": "Quelle est la limite légale de taux d'alcoolémie en France pour les conducteurs hors permis probatoire ?",
+    "answers": {
+      "correct": [
+        "0,5 g/L"
+      ],
+      "wrong": [
+        "0,0 g/L",
+        "0,2 g/L",
+        "0,8 g/L"
+      ]
+    },
+    "explication": "En France, les conducteurs hors permis probatoire ont une limite légale de 0,5 g/L de taux d'alcoolémie, tandis que pour les conducteurs novices (moins de 3 ans de permis) la limite est de 0,2 g/L.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "knowledge",
+    "timestamp": "2025-03-11 14:32:32",
+    "ai_learning_source": "knowledge_repository",
+    "ai_confidence_score": null,
+    "generation_time": 3.52
+  },
+  {
+    "ID": "KNO002",
+    "theme": "Notions diverses",
+    "question": "Quelle est la principale défaillance d'un conducteur lors d'un accident de la route ?",
+    "answers": {
+      "correct": [
+        "Une analyse erronée de la situation"
+      ],
+      "wrong": [
+        "Une mauvaise perception des indices",
+        "Une mauvaise décision",
+        "Une mauvaise manipulation des commandes"
+      ]
+    },
+    "explication": "La principale défaillance d'un conducteur lors d'un accident de la route est une analyse erronée de la situation. Les autres défaillances incluent une mauvaise perception des indices, une mauvaise décision et une mauvaise manipulation des commandes.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "knowledge",
+    "timestamp": "2025-03-11 14:31:12",
+    "ai_learning_source": "knowledge_repository",
+    "ai_confidence_score": null,
+    "generation_time": 4.66
+  },
+  {
+    "ID": "FREE016",
+    "theme": "Notions diverses",
+    "question": "Quelle est la fonction du liquide de refroidissement dans un véhicule ?",
+    "answers": {
+      "correct": [
+        "Maintenir le moteur à une température optimale"
+      ],
+      "wrong": [
+        "Diminuer la consommation de carburant",
+        "Lubrifier les pièces du moteur",
+        "Nettoyer les vitres du véhicule"
+      ]
+    },
+    "explication": "Le liquide de refroidissement a pour rôle de maintenir le moteur à une température optimale en évitant la surchauffe. Cela permet de préserver le bon fonctionnement du moteur et d'éviter les dommages causés par la chaleur excessive.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-06 18:57:23",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.95
+  },
+  {
+    "ID": "FREE013",
+    "theme": "Notions diverses",
+    "question": "QCM : Quels sont les équipements de sécurité obligatoires à bord d'un véhicule motorisé en France ?",
+    "answers": {
+      "correct": [
+        "Un gilet de haute visibilité",
+        "Un triangle de pré-signalisation"
+      ],
+      "wrong": [
+        "Un parapluie",
+        "Des jumelles",
+        "Un double des clés du véhicule"
+      ]
+    },
+    "explication": "En France, il est obligatoire d'avoir à bord d'un véhicule motorisé un gilet de haute visibilité et un triangle de pré-signalisation en cas d'arrêt d'urgence sur la route. Ces équipements sont essentiels pour assurer la sécurité en cas de panne ou d'accident.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-06 18:54:42",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.33
+  },
+  {
+    "ID": "FREE012",
+    "theme": "Notions diverses",
+    "question": "QCM : Quel est l'âge minimum légal pour conduire un cyclomoteur en France ?",
+    "answers": {
+      "correct": [
+        "14 ans"
+      ],
+      "wrong": [
+        "16 ans",
+        "18 ans",
+        "12 ans"
+      ]
+    },
+    "explication": "En France, l'âge minimum légal pour conduire un cyclomoteur est de 14 ans. Cependant, il est nécessaire de passer le Brevet de Sécurité Routière (BSR) pour pouvoir conduire un cyclomoteur à partir de 14 ans, et une formation complémentaire pour les jeunes de 14 à 16 ans.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-06 18:54:09",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.56
+  },
+  {
+    "ID": "FREE011",
+    "theme": "Notions diverses",
+    "question": "QCM : Quelle est la vitesse maximale autorisée sur une route à double sens sans séparateur central en agglomération?",
+    "answers": {
+      "correct": [
+        "50 km/h"
+      ],
+      "wrong": [
+        "30 km/h",
+        "70 km/h",
+        "80 km/h"
+      ]
+    },
+    "explication": "En agglomération sur une route à double sens sans séparateur central, la vitesse maximale autorisée est de 50 km/h. ",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-06 18:53:33",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.81
+  },
+  {
+    "ID": "FREE010",
+    "theme": "Notions diverses",
+    "question": "QCM : Quelle est la limite légale de taux d'alcoolémie en France pour les conducteurs novices (moins de 3 ans de permis) ?",
+    "answers": {
+      "correct": [
+        "0,2 g/L"
+      ],
+      "wrong": [
+        "0,0 g/L",
+        "0,5 g/L",
+        "0,3 g/L"
+      ]
+    },
+    "explication": "En France, les conducteurs novices (moins de 3 ans de permis) ont une limite légale de 0,2 g/L de taux d'alcoolémie, alors que la limite pour les conducteurs expérimentés est de 0,5 g/L.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-06 18:53:08",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.94
+  },
+  {
+    "ID": "FREE009",
+    "theme": "Notions diverses",
+    "question": "QCM : Quels sont les effets négatifs de la pollution atmosphérique causée par les véhicules ?",
+    "answers": {
+      "correct": [
+        "Augmentation des maladies respiratoires",
+        "Accélération du réchauffement climatique"
+      ],
+      "wrong": [
+        "Augmentation de la consommation de carburant",
+        "Augmentation du trafic routier"
+      ]
+    },
+    "explication": "La pollution atmosphérique causée par les véhicules entraîne principalement :\n-Une augmentation des maladies respiratoires chez les individus exposés  \n-L'accélération du réchauffement climatique en raison des émissions de gaz à effet de serre.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-06 18:52:39",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.75
+  },
+  {
+    "ID": "FREE008",
+    "theme": "Notions diverses",
+    "question": "Quelle est la bonne attitude à adopter lorsque vous croisez un groupe de piétons sur un passage pour piétons ?",
+    "answers": {
+      "correct": [
+        "Ralentir et s'arrêter si nécessaire"
+      ],
+      "wrong": [
+        "Accélérer pour éviter de les gêner",
+        "Klaxonner pour les avertir de votre présence",
+        "Les contourner par la droite"
+      ]
+    },
+    "explication": "Lorsque vous croisez un groupe de piétons sur un passage pour piétons, vous devez ralentir et vous arrêter si nécessaire pour leur permettre de traverser en toute sécurité. C'est une règle de base du Code de la Route visant à assurer la sécurité des piétons.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-06 18:51:46",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 3.14
+  },
+  {
+    "ID": "FREE007",
+    "theme": "Notions diverses",
+    "question": "QCM : Quels sont les 2 principaux facteurs responsables d'accident sur la route ?",
+    "answers": {
+      "correct": [
+        "Fatigue",
+        "Alcool"
+      ],
+      "wrong": [
+        "Non respect des limites de vitesse",
+        "Utilisation du téléphone au volant"
+      ]
+    },
+    "explication": "La fatigue et la consommation d'alcool sont des facteurs majeurs qui peuvent altérer les capacités du conducteur et augmenter le risque d'accident. Le port de la ceinture de sécurité, le respect des limitations de vitesse et l'utilisation du clignotant sont des mesures de sécurité importantes pour éviter les accidents, mais ne sont pas des facteurs qui augmentent directement le risque d'accident.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-06 18:51:10",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.84
+  },
+  {
+    "ID": "FREE006",
+    "theme": "Notions diverses",
+    "question": "QCM : Quels sont les effets de la pollution atmosphérique sur l'environnement ?",
+    "answers": {
+      "correct": [
+        "Augmentation de l'effet de serre",
+        "Détérioration de la qualité de l'air"
+      ],
+      "wrong": [
+        "Diminution de la température globale",
+        "Amélioration de la qualité de l'air",
+        "Contribution à la biodiversité"
+      ]
+    },
+    "explication": "La pollution atmosphérique entraîne une augmentation de l'effet de serre, contribuant au réchauffement climatique, et une détérioration de la qualité de l'air, nuisible à la santé humaine et à l'environnement.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-06 18:50:09",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 3.07
+  },
+  {
+    "ID": "FREE005",
+    "theme": "Notions diverses",
+    "question": "Que devez-vous faire avant de quitter votre véhicule stationné en dehors d'une zone prévue à cet effet ?",
+    "answers": {
+      "correct": [
+        "Couper le moteur",
+        "Verrouiller les portes"
+      ],
+      "wrong": [
+        "Enclecher le premier rapport",
+        "Verrouiller manuellement l'accès au coffre"
+      ]
+    },
+    "explication": "Avant de quitter votre véhicule stationné en dehors d'une zone prévue à cet effet, vous devez couper le moteur pour des raisons de sécurité et de respect de l'environnement. Vous devez également verrouiller les portes pour éviter tout vol ou intrusion.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-06 18:42:05",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 4.69
+  },
+  {
+    "ID": "DUO001",
+    "theme": "Notions diverses",
+    "question": "Le feu jaune clignotant fait office de feu rouge. Vrai ou Faux ?",
+    "answers": {
+      "correct": [
+        "Faux"
+      ],
+      "wrong": [
+        "Vrai"
+      ]
+    },
+    "explication": "Le feu jaune clignotant fait office de feu vert, pas de feu rouge.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "duo",
+    "timestamp": "2025-03-04 09:18:37",
+    "ai_learning_source": "books",
+    "ai_confidence_score": null,
+    "generation_time": 2.79
+  },
+  {
+    "ID": "INP002",
+    "theme": "Notions diverses",
+    "question": "Quelle couleur est utilisée pour dessiner la ligne d'effet d'un feu, d'un Stop ou d'un Céder le passage?",
+    "answers": {
+      "correct": [
+        "Blanc"
+      ],
+      "accepted": [],
+      "wrong": [
+        "Rouge",
+        "Jaune",
+        "Bleu"
+      ]
+    },
+    "explication": "La ligne d'effet d'un feu, d'un Stop ou d'un Céder le passage est dessinée en blanc sur la chaussée.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "input",
+    "timestamp": "2025-03-04 08:44:28",
+    "ai_learning_source": "books",
+    "ai_confidence_score": null,
+    "generation_time": 3.3
+  },
+  {
+    "ID": "INP001",
+    "theme": "Notions diverses",
+    "question": "La distance de freinage d’un tramway est :",
+    "answers": {
+      "correct": [
+        "Plus importante qu'une voiture"
+      ],
+      "accepted": [],
+      "wrong": [
+        "Moins importante qu'une voiture",
+        "Similaire à une voiture"
+      ]
+    },
+    "explication": "La distance de freinage d'un tramway est plus importante que celle d'une voiture en raison de sa masse et de sa vitesse.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "input",
+    "timestamp": "2025-03-04 08:35:46",
+    "ai_learning_source": "inspired_by_qcm",
+    "ai_confidence_score": null,
+    "generation_time": 2.66
+  },
+  {
+    "ID": "PAN214",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Paiement automatique par pièces de monnaie"
+      ],
+      "wrong": [
+        "Paiement par carte bancaire",
+        "Paiement par chèque",
+        "Paiement par smartphone"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": "/static/images/paiement_automatique_pieces.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-04 08:26:23",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "KNO001",
+    "theme": "Notions diverses",
+    "question": "Quelle est la vitesse maximale autorisée sur autoroute en France pour les véhicules légers?",
+    "answers": {
+      "correct": [
+        "130 km/h"
+      ],
+      "wrong": [
+        "110 km/h",
+        "150 km/h",
+        "90 km/h"
+      ]
+    },
+    "explication": "En France, la vitesse maximale autorisée sur autoroute pour les véhicules légers est de 130 km/h, sauf indication contraire.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "knowledge",
+    "timestamp": "2025-03-03 21:49:38",
+    "ai_learning_source": "knowledge_repository",
+    "ai_confidence_score": null,
+    "generation_time": 2.07
+  },
+  {
+    "ID": "PDF21BIB73",
+    "theme": "Notions diverses",
+    "question": "Que signifie un feu jaune clignotant en signalisation temporaire lors de travaux sur la route ?",
+    "answers": {
+      "correct": [
+        "Il fait office de feu vert"
+      ],
+      "wrong": [
+        "Il indique un feu rouge imminent",
+        "Il signifie un arrêt obligatoire",
+        "Il annonce un feu rouge"
+      ]
+    },
+    "explication": "En signalisation temporaire, un feu jaune clignotant fait office de feu vert, indiquant aux conducteurs de passer avec prudence.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "pdf",
+    "timestamp": "2025-03-03 21:11:07",
+    "ai_learning_source": "books",
+    "pdf_details": {
+      "book": "Bible",
+      "pages_used": [
+        73,
+        74,
+        75
+      ]
+    },
+    "ai_confidence_score": null,
+    "generation_time": 3.23
+  },
+  {
+    "ID": "PDF61BIB23",
+    "theme": "Notions diverses",
+    "question": "Que doit faire un conducteur en présence d'un feu rouge selon le Code de la Route français ?",
+    "answers": {
+      "correct": [
+        "Il doit s'arrêter avant la ligne d'effet du feu"
+      ],
+      "wrong": [
+        "Il doit laisser la priorité à droite",
+        "Il peut passer si aucun autre véhicule n'est présent sur la route",
+        "Il doit s'arrêter après la ligne d'effet du feu"
+      ]
+    },
+    "explication": "En présence d'un feu rouge, tout véhicule doit être arrêté en deçà de la ligne d'effet du feu pour respecter la signalisation lumineuse et assurer la sécurité de la circulation.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "pdf",
+    "timestamp": "2025-03-03 21:09:44",
+    "ai_learning_source": "books",
+    "pdf_details": {
+      "book": "Bible",
+      "pages_used": [
+        23,
+        24,
+        25
+      ]
+    },
+    "ai_confidence_score": null,
+    "generation_time": 3.43
+  },
+  {
+    "ID": "PDF86BIB71",
+    "theme": "Notions diverses",
+    "question": "Quelle couleur est spécifique de la signalisation temporaire, que ce soit pour les panneaux ou le marquage au sol ?",
+    "answers": {
+      "correct": [
+        "Jaune"
+      ],
+      "wrong": [
+        "Bleu",
+        "Orange",
+        "Violet"
+      ]
+    },
+    "explication": "La couleur jaune est spécifique de la signalisation temporaire, que ce soit pour les panneaux ou le marquage au sol. Elle prime sur la signalisation existante.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "pdf",
+    "timestamp": "2025-03-03 21:07:18",
+    "ai_learning_source": "books",
+    "pdf_details": {
+      "book": "Bible",
+      "pages_used": [
+        71,
+        72,
+        73
+      ]
+    },
+    "ai_confidence_score": null,
+    "generation_time": 3.36
+  },
+  {
+    "ID": "PDF78BIB200",
+    "theme": "Notions diverses",
+    "question": "Quel pourcentage des accidents mortels sur les autoroutes sont causés par la fatigue et l'assoupissement selon le texte ?",
+    "answers": {
+      "correct": [
+        "30%"
+      ],
+      "wrong": [
+        "10%",
+        "20%",
+        "50%"
+      ]
+    },
+    "explication": "La fatigue et l'assoupissement provoquent 30% des accidents mortels sur les autoroutes.",
+    "comment": "",
+    "difficulty": "difficile",
+    "image_path": null,
+    "source": "pdf",
+    "timestamp": "2025-03-03 21:06:03",
+    "ai_learning_source": "books",
+    "pdf_details": {
+      "book": "Bible",
+      "pages_used": [
+        200,
+        201,
+        202
+      ]
+    },
+    "ai_confidence_score": null,
+    "generation_time": 5.46
+  },
+  {
+    "ID": "PDF80BIB62",
+    "theme": "Notions diverses",
+    "question": "Quelle est la longueur des traits composant le marquage d'avertissement lorsque les lignes de séparation des voies sont discontinues?",
+    "answers": {
+      "correct": [
+        "3 mètres"
+      ],
+      "wrong": [
+        "5 mètres",
+        "7 mètres",
+        "10 mètres"
+      ]
+    },
+    "explication": "Lorsque les lignes de séparation des voies sont discontinues, le marquage d'avertissement est composé de traits de 3 mètres espacés de 10 mètres.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "pdf",
+    "timestamp": "2025-03-03 21:04:53",
+    "ai_learning_source": "books",
+    "pdf_details": {
+      "book": "Bible",
+      "pages_used": [
+        62,
+        63,
+        64
+      ]
+    },
+    "ai_confidence_score": null,
+    "generation_time": 3.0
+  },
+  {
+    "ID": "FREE004",
+    "theme": "Notions diverses",
+    "question": "QCM : Quelle est la première chose à faire en cas d'accident de la route ?",
+    "answers": {
+      "correct": [
+        "Protéger la zone en mettant en place un triangle de signalisation"
+      ],
+      "wrong": [
+        "Secourir les blessés immédiatement",
+        "Prendre des photos pour les assurances",
+        "Appeler les secours"
+      ]
+    },
+    "explication": "La première chose à faire en cas d'accident de la route est de protéger la zone en mettant en place un triangle de signalisation pour éviter d'autres accidents. Ensuite, il faut appeler les secours pour venir en aide aux éventuels blessés.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-03 20:48:12",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 3.78
+  },
+  {
+    "ID": "FREE003",
+    "theme": "Notions diverses",
+    "question": "Lorsque vous quittez votre véhicule, vous devez :",
+    "answers": {
+      "correct": [
+        "Couper le moteur",
+        "Verrouiller les portes"
+      ],
+      "wrong": [
+        "enclencher le premier rapport",
+        "désactiver l'ABS",
+        "verrouiller les ceintures de sécurité"
+      ]
+    },
+    "explication": "Il est important de couper le moteur pour éviter tout risque d'accident lié à une éventuelle mise en mouvement involontaire du véhicule. Verrouiller les portes permet de sécuriser le véhicule et d'éviter les vols.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-03 20:45:58",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 3.6
+  },
+  {
+    "ID": "FREE001",
+    "theme": "Notions diverses",
+    "question": "Quelles sont les conséquences de la consommation d'alcool sur la conduite d'un véhicule ?",
+    "answers": {
+      "correct": [
+        "Diminution des réflexes",
+        "Altération de la vision"
+      ],
+      "wrong": [
+        "Amélioration de la coordination",
+        "Diminution de la fatigue"
+      ]
+    },
+    "explication": "La consommation d'alcool entraîne une diminution des réflexes et une altération de la vision, ce qui peut affecter gravement la capacité du conducteur à réagir rapidement et à percevoir correctement son environnement, augmentant ainsi le risque d'accident.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-03 20:35:57",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 4.98
+  },
+  {
+    "ID": "QCM94",
+    "theme": "Mécanique et équipements",
+    "question": "Le système de sécurité déclenchant automatiquement les feux de détresse est ",
+    "answers": {
+      "correct": [
+        "l'AFU"
+      ],
+      "wrong": [
+        "l'ABS",
+        "l'ESP",
+        "L'AFIL"
+      ]
+    },
+    "explication": "AFU signifie Asssitance au Freinage d'Urgence. Son rôle est de détecter un freinage d'urgence en fonction de la vitesse d'enfoncement de la pédale de frein et d'amplifier le freinage à son maximum. Il déclenche automatiquement les feux de détresse pour prévenir les autres usagers",
+    "comment": "",
+    "difficulty": "difficile",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-03 19:17:46",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM07",
+    "theme": "Les autres usagers",
+    "question": "Les chances de survie d'un piéton heurté à 50Km/h sont d'environ : ",
+    "answers": {
+      "correct": [
+        "20%"
+      ],
+      "wrong": [
+        "0%",
+        "30%",
+        "50%"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-03 19:16:20",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM111",
+    "theme": "Premiers secours",
+    "question": "Lors d'un accident, l'ordre d'actions est ",
+    "answers": {
+      "correct": [
+        "Protéger, alerter, secourir"
+      ],
+      "wrong": [
+        "Alerter, secourir, protéger",
+        "Secourir, alerter, protéger",
+        "Alerter, protéger, secourir"
+      ]
+    },
+    "explication": "Lors d'un accident, il est primordial de protéger les lieux pour éviter tout danger supplémentaire, puis d'alerter les secours afin qu'ils interviennent rapidement. Enfin, il est important de secourir les victimes en attendant l'arrivée des secours professionnels.",
+    "comment": "",
+    "difficulty": "difficile",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-03 19:15:52",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM105",
+    "theme": "Notions diverses",
+    "question": "Déjà titulaire du permis, je suis atteint d’une maladie qui me rend inapte à la conduite. Je peux conduire :",
+    "answers": {
+      "correct": [
+        "Après avoir consulté un médecin agréé par la préfécture"
+      ],
+      "wrong": [
+        "Si je ne commets aucune infraction",
+        "Si je ne circule pas sur autoroute",
+        "Après avoir obtenu un certificat médical de mon médecin traitant"
+      ]
+    },
+    "explication": "En cas d'inaptitude à la conduite due à une maladie, il est obligatoire de consulter un médecin agréé par la préfecture pour obtenir un avis médical et éventuellement une suspension ou une annulation de son permis de conduire. ",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-03 19:15:10",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM02",
+    "theme": "Les autres usagers",
+    "question": "Les colisions avec des tramways impliquent majoritairement",
+    "answers": {
+      "correct": [
+        "Des véhicules légers"
+      ],
+      "wrong": [
+        "Des piétons",
+        "Des poids lourds",
+        "Des motos"
+      ]
+    },
+    "explication": "Les collisions avec des tramways impliquent majoritairement des véhicules légers car ces derniers sont plus nombreux sur la route que les autres types de véhicules. De plus, les tramways ont généralement des voies dédiées et des dispositifs de signalisation spécifiques pour éviter les collisions avec d'autres trams ou véhicules plus lourds.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-03 19:13:51",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM03",
+    "theme": "Les autres usagers",
+    "question": "Un piéton montre clairement sa volonté de traverser mais il n'y a pas de passage piétons",
+    "answers": {
+      "correct": [
+        "Il a la priorité sur les voitures "
+      ],
+      "wrong": [
+        "Il n'a pas la priorité sur les voitures",
+        "Il doit attendre que les voitures passent avant de traverser",
+        "Les voitures ont la priorité car il n'y a pas de passage piétons"
+      ]
+    },
+    "explication": "En montrant clairement son intention de traverser et en l'absence de passage piétons à proximité dans cette longue rue, un piéton a en effet la priorité sur les voitures qui doivent s'arrêter pour le laisser passer.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-03 18:02:43",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM107",
+    "theme": "Notions diverses",
+    "question": "Commettre en même temps plusieurs infractions peut entrainer un retrait de points maximum cumulé de ",
+    "answers": {
+      "correct": [
+        "8 points"
+      ],
+      "wrong": [
+        "6 points",
+        "10 points",
+        "12 points"
+      ]
+    },
+    "explication": "En France, commettre plusieurs infractions en même temps peut entrainer un retrait de points maximum cumulé de 8 points, selon le barème établi par le Code de la Route. Chaque infraction entraine un retrait de points spécifique et ceux-ci peuvent s'additionner si plusieurs infractions sont commises simultanément.",
+    "comment": "",
+    "difficulty": "difficile",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-03 17:58:42",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM42",
+    "theme": "Le conducteur",
+    "question": "A 25 Km/h je dois laisser",
+    "answers": {
+      "correct": [
+        "2 secondes de distance de sécurité"
+      ],
+      "wrong": [
+        "1 secondes de distance de sécurité",
+        "3 secondes de distance de sécurité",
+        "5 seconde de distance de sécurité"
+      ]
+    },
+    "explication": "Quelle que soit la vitesse de circulation, il faut toujours laisser au moins 2 secondes de distance de sécurité aussi bien en ville que sur autoroute. Cette distance permet de voir et de penser pour agir en toute sécurité. Pour calculer la distnace parcourue en 1 seconde, il faut multiplier le chiffres des dizaines de sa vitesse par 3, ex: à 80km/h la distance parcourue en 1 seconde est de 8*3=24mètres, à 130km/h, 13*3=39 mètres parcourus en 1 seconde",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-03 16:37:46",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM51",
+    "theme": "Le conducteur",
+    "question": "2/3 des accidents se produisent sur un trajet : ",
+    "answers": {
+      "correct": [
+        "De moins de 15km autour du domicile"
+      ],
+      "wrong": [
+        "De plus de 15km autour du domicile",
+        "nouveau pour le conducteur",
+        "sous la pluie"
+      ]
+    },
+    "explication": "2 tiers des accidents se produisent sur un trajet de moins de 15km. Le risque augmente sur ces petits parcours connus, proche du domicile car le niveau de vigilance y est généralement moins élevé",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-03 16:34:39",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM83",
+    "theme": "Mécanique et équipements",
+    "question": "À quelle fréquence est-il préconisé de vérifier la pression des pneus ?",
+    "answers": {
+      "correct": [
+        "1x par mois"
+      ],
+      "wrong": [
+        "1x par jour",
+        "1x par an",
+        "1x par semaine"
+      ]
+    },
+    "explication": "Il est recommandé de vérifier la pression des pneus une fois par mois car une pression inadéquate peut augmenter la consommation de carburant, réduire la durée de vie des pneus et affecter la tenue de route du véhicule. ",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-03 14:34:06",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM14",
+    "theme": "La circulation routière",
+    "question": "En tant que conducteur novice, ma vitesse est limitée à 110Km/h sur autoroute",
+    "answers": {
+      "correct": [
+        "oui"
+      ],
+      "wrong": [
+        "Non"
+      ]
+    },
+    "explication": "Cette réponse est correcte car en France, la vitesse maximale autorisée sur autoroute pour les conducteurs novices ayant moins de 3 ans de permis est de 110 km/h. Une fois ce délai écoulé, la vitesse maximale autorisée sur autoroute passe à 130 km/h.",
+    "comment": "",
+    "difficulty": "Moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-02 19:12:57",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM53",
+    "theme": "Le conducteur",
+    "question": "La principale défaillance du conducteur lors d'un accident de la circulation est ",
+    "answers": {
+      "correct": [
+        "une analyse erronée de la situation"
+      ],
+      "wrong": [
+        "la perception tardive d'un indice",
+        "une décision inadaptée",
+        "une erreur dans la manipulation des commandes"
+      ]
+    },
+    "explication": "La principale défaillance d'un conducteur lors d'un accident de la route est une analyse erronée de la situation, vient ensuite une mauvaise perception des indices en 2nde position, une mauvaise décision en 3ème et enfin une mauvaise manipulation des commandes en 4ème",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-02 12:16:40",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM122",
+    "theme": "La sécurité",
+    "question": "A l'arrière du véhicule, J'installe les personnes les plus grandes sur les côtés :",
+    "answers": {
+      "correct": [
+        "oui"
+      ],
+      "wrong": [
+        "Non"
+      ]
+    },
+    "explication": "J'installe les personnes les plus grandes sur les côtés pour garder toujours un maximum de visibilité vers l'arrière.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-15 14:56:05",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "DUO012",
+    "theme": "Notions diverses",
+    "question": "Un conducteur hors permis probatoire est en infraction à partir de 0.2g par litre de sang.",
+    "answers": {
+      "correct": [
+        "Faux"
+      ],
+      "wrong": [
+        "Vrai"
+      ]
+    },
+    "explication": "Un conducteur hors permis probatoire est en infraction à partir de 0.5g par litre de sang, pas à partir de 0.2g.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "duo",
+    "timestamp": "2025-03-15 14:58:44",
+    "ai_learning_source": "culture_generale",
+    "ai_confidence_score": null,
+    "generation_time": 1.93
+  },
+  {
+    "ID": "PAN102",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Entrée dans une zone à stationnement unilatéral à alternance semi-mensuelle"
+      ],
+      "wrong": [
+        "Fin de zone à stationnement unilatéral à alternance semi-mensuelle",
+        "Zone de stationnement réservée aux riverains",
+        "Zone de stationnement interdit le week-end"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": "/static/images/zone_stationnement_unilaterale_alternance_semi_mensuelle.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-15 14:59:06",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "DUO013",
+    "theme": "Notions diverses",
+    "question": "Conduire avec un taux d'alcoolémie de 0.8g/litre de sang constitue un délit et provoque un risque d'emprisonnement",
+    "answers": {
+      "correct": [
+        "Vrai"
+      ],
+      "wrong": [
+        "Faux"
+      ]
+    },
+    "explication": "Vrai. En France, conduire avec un taux d'alcoolémie égal ou supérieur à 0.8g/litre de sang est considéré comme un délit. Cela peut entraîner une amende, la suspension du permis de conduire, voire une peine d'emprisonnement.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "duo",
+    "timestamp": "2025-03-15 15:01:15",
+    "ai_learning_source": "culture_generale",
+    "ai_confidence_score": null,
+    "generation_time": 2.51
+  },
+  {
+    "ID": "PAN210",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Fin d'un créneau de dépassement"
+      ],
+      "wrong": [
+        "Début d'un créneau de dépassement",
+        "Début d'une zone de dépassement interdit",
+        "Fin d'une zone de dépassement autorisé"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": "/static/images/fin_creneau_depassement.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-15 15:02:14",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM106",
+    "theme": "Notions diverses",
+    "question": "Je commets un refus d’obtempérer si je ne m’arrête pas aux signes d’un agent",
+    "answers": {
+      "correct": [
+        "oui"
+      ],
+      "wrong": [
+        "Non"
+      ]
+    },
+    "explication": "Le refus d'obtempérer est en effet le fait de ne pas se soumettre à la décision d'un agent de police qui vous de vous demande de vous arrêter.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-15 15:02:38",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PAN82",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Cédez le passage"
+      ],
+      "wrong": [
+        "Priorité à droite",
+        "Stop obligatoire",
+        "Zone de danger"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": "/static/images/cedez_le_passage.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-15 15:05:30",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "QCM88",
+    "theme": "Mécanique et équipements",
+    "question": "Pour changer une roue, je débloque les écrous :",
+    "answers": {
+      "correct": [
+        "Avant de lever le véhicule avec le cric"
+      ],
+      "wrong": [
+        "Après avoir levé le véhicule avec le cric",
+        "Cela n'a pas d'importance",
+        "Je ne dois pas débloquer les écrous"
+      ]
+    },
+    "explication": "Il est important de débloquer les écrous avant de lever le véhicule avec le cric car une fois le véhicule soulevé, il sera plus difficile voire impossible de débloquer les écrous. En débloquant les écrous avant de lever le véhicule, on s'assure de pouvoir changer la roue en toute sécurité une fois le véhicule soulevé.",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": null,
+    "source": "qcm",
+    "timestamp": "2025-03-15 15:06:18",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PAN223",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Voie verte - réservée aux piétons et véhicules non motorisés"
+      ],
+      "wrong": [
+        "Voie verte - réservée aux piétons",
+        "Voie verte - réservée aux véhicules non motorisés",
+        "Chemin privé - accès interdit aux piétons"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "moyen",
+    "image_path": "/static/images/voie_verte.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-15 15:07:13",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PAN21",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Hauteur maximum"
+      ],
+      "wrong": [
+        "Largeur maximum",
+        "Poids maximum",
+        "Puissance maximale autorisée"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": "/static/images/hauteur_maximum.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-15 15:09:09",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "PAN188",
+    "theme": "Panneaux de signalisation",
+    "question": "Que signifie ce panneau ?",
+    "answers": {
+      "correct": [
+        "Passage piétons"
+      ],
+      "wrong": [
+        "Passage à niveau",
+        "Passage souterrain pour piétons",
+        "Intersection dangereuse"
+      ]
+    },
+    "explication": "",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": "/static/images/passage_pour_pietons.png",
+    "source": "panneaux",
+    "timestamp": "2025-03-15 15:11:14",
+    "ai_learning_source": ""
+  },
+  {
+    "ID": "DUO015",
+    "theme": "Notions diverses",
+    "question": "Rouler à une vitesse plus élevée augmente le risque d'accident et les conséquences corporelles en cas de choc. Vrai ou faux ?",
+    "answers": {
+      "correct": [
+        "Vrai"
+      ],
+      "wrong": [
+        "Faux"
+      ]
+    },
+    "explication": "La vitesse augmente à la fois le risque d'avoir un accident et les conséquences corporelles en cas de choc. Une diminution de 10 % de la vitesse entraîne une baisse de 10 % des accidents légers, 20 % des accidents graves et 40 % des accidents mortels.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "duo",
+    "timestamp": "2025-03-15 15:12:55",
+    "ai_learning_source": "books",
+    "ai_confidence_score": null,
+    "generation_time": 2.68
+  },
+  {
+    "ID": "FREE036",
+    "theme": "Notions diverses",
+    "question": "QCM : Quelle attitude adopter en tant que conducteur lorsque l'on se sent fatigué au volant ?",
+    "answers": {
+      "correct": [
+        "S'arrêter sur une aire de repos pour se reposer"
+      ],
+      "wrong": [
+        "Augmenter sa vitesse pour arriver plus vite",
+        "Écouter de la musique pour se réveiller",
+        "Boire une boisson énergisante"
+      ]
+    },
+    "explication": "Il est essentiel de faire des pauses régulières et de s'arrêter sur une aire de repos pour se reposer afin de lutter contre la somnolence au volant, plutôt que d'adopter des comportements dangereux comme augmenter sa vitesse ou se stimuler avec de la musique forte ou des boissons énergisantes.",
+    "comment": "",
+    "difficulty": "facile",
+    "image_path": null,
+    "source": "freestyle",
+    "timestamp": "2025-03-15 15:13:27",
+    "ai_learning_source": "original",
+    "ai_confidence_score": null,
+    "generation_time": 2.39
+  }
+]

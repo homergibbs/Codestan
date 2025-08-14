@@ -1,0 +1,18 @@
+# Secrets & local-only files
+.env
+codestan.db
+users/
+
+# Python noise
+__pycache__/
+*.pyc
+*.pyo
+*.log
+
+# macOS noise
+.DS_Store
+
+# Virtual envs (if you ever use one)
+.venv/
+env/
+venv/
