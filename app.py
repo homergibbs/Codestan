@@ -7,12 +7,14 @@ from db import engine, SessionLocal
 from models import Base, User
 from sqlalchemy.exc import IntegrityError
 from dotenv import load_dotenv
+from models import Flag
 import json
-import random
+import random, hashlib
 import os
-import hashlib
 import secrets
 import re
+from models import Flag
+
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", secrets.token_hex(16))
@@ -133,6 +135,39 @@ def sync_user_to_db_from_json(user_data: dict):
         # Don't crash the request if the sync fails; JSON remains source-of-truth for now
         pass
 
+def _pool_key(mode: str, theme: str | None) -> str:
+    return f"{mode}" if not theme else f"{mode}:{theme}"
+
+def _pool_version(eligible_ids: list) -> str:
+    h = hashlib.sha256(",".join(map(str, sorted(eligible_ids))).encode("utf-8")).hexdigest()
+    return h[:12]
+
+def pick_next_in_cycle(user_data: dict, eligible_ids: list, mode: str, theme: str | None = None):
+    """
+    Returns the next question id without repeats until all are seen, then reshuffles.
+    Persists state in user_data["question_rotation"].
+    """
+    if not eligible_ids:
+        return None
+    rotation = user_data.setdefault("question_rotation", {})
+    key = _pool_key(mode, theme)
+    ver = _pool_version(eligible_ids)
+    pool = rotation.get(key)
+
+    eligible_set = set(eligible_ids)
+    if not pool or pool.get("version") != ver:
+        remaining = list(eligible_ids)
+        random.shuffle(remaining)
+        rotation[key] = pool = {"version": ver, "remaining": remaining}
+    else:
+        pool["remaining"] = [qid for qid in pool.get("remaining", []) if qid in eligible_set]
+
+    if not pool["remaining"]:
+        new_cycle = list(eligible_ids)
+        random.shuffle(new_cycle)
+        pool["remaining"] = new_cycle
+
+    return pool["remaining"].pop()
 
 # --- Question Logic ---
 with open(QUESTION_FILE, "r", encoding="utf-8") as f:
@@ -788,7 +823,19 @@ def quiz():
     if not question_pool:
         return "Aucune question disponible pour ce mode."
 
-    question = random.choice(question_pool)
+    # === No-repeat selection ===
+    eligible_ids = [q["ID"] for q in question_pool]
+    next_id = pick_next_in_cycle(user_data, eligible_ids, mode=mode, theme=None)
+
+    # Map ID -> question object
+    pool_by_id = {q["ID"]: q for q in question_pool}
+    question = pool_by_id.get(next_id, random.choice(question_pool))  # safe fallback
+
+    # Persist rotation immediately
+    with open(user_file, "w", encoding="utf-8") as f:
+        json.dump(user_data, f, indent=2, ensure_ascii=False)
+
+    # Answers (as before)
     all_answers = question["answers"]["correct"] + question["answers"]["wrong"]
     random.shuffle(all_answers)
 
@@ -800,6 +847,45 @@ def quiz():
         global_stats=global_stats,
         today_stats=today_stats
     )
+
+@app.route("/flag-question", methods=["POST"])
+@login_required
+def flag_question():
+    data = request.get_json(silent=True) or {}
+
+    qid = data.get("question_id")
+    comment = (data.get("comment") or "").strip()
+    mode = data.get("mode")
+    theme = data.get("theme")
+
+    if not qid or not comment:
+        return {"ok": False, "error": "Missing question_id or comment"}, 400
+
+    # Try to capture reporter email from the current user JSON (keeps it simple)
+    email = None
+    try:
+        user_key = session.get("user")
+        if user_key:
+            user_file = os.path.join(USER_DIR, f"{user_key}.json")
+            if os.path.exists(user_file):
+                with open(user_file, "r", encoding="utf-8") as f:
+                    user_data = json.load(f)
+                    email = (user_data.get("email") or "").strip().lower()
+    except Exception:
+        pass  # non-blocking
+
+    # Save to DB
+    with SessionLocal() as db:
+        db.add(Flag(
+            question_id=str(qid),
+            email=email,
+            mode=mode,
+            theme=theme,
+            comment=comment
+        ))
+        db.commit()
+
+    return {"ok": True}
 
 @app.route("/submit-answer", methods=["POST"])
 @login_required
@@ -984,6 +1070,9 @@ def finalize_active_session(user_data):
 
     user_data.setdefault("session_log", []).append(session_data)
     session.pop("codestan_session", None)
+
+    # ✅ keep DB in sync when a session ends (time_spent_minutes, etc.)
+    sync_user_to_db_from_json(user_data)
 
 # --- Run the app ---
 if __name__ == "__main__":

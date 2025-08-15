@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-from sqlalchemy import Column, Integer, String, Float, DateTime, Boolean
+from sqlalchemy import Column, Integer, String, DateTime, Boolean, Text, Float
 from sqlalchemy.types import JSON as JSONType
 from db import Base
 
@@ -48,3 +48,15 @@ class User(Base):
     free_forever = Column(Boolean, default=False)
     plan = Column(String, default="free")
     quota_used = Column(Integer, default=0)
+
+class Flag(Base):
+    __tablename__ = "flags"
+
+    id = Column(Integer, primary_key=True)
+    question_id = Column(String, nullable=False)   # we’ll store your question’s ID as text
+    email = Column(String, nullable=True)          # reporter’s email (if logged in)
+    mode = Column(String, nullable=True)           # e.g. "free", "theme", "mistakes"
+    theme = Column(String, nullable=True)          # optional theme name
+    comment = Column(Text, nullable=False)         # what’s wrong
+    resolved = Column(Boolean, default=False)      # for later
+    created_at = Column(DateTime, default=datetime.utcnow)

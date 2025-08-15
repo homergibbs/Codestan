@@ -37,6 +37,8 @@
         .stat-card {
             margin-bottom: 1rem;
         }
+        /* cursor hint when dragging the SweetAlert title */
+        .swal2-title { cursor: grab; user-select: none; -webkit-user-select: none; }
     </style>
 </head>
 <body>
@@ -56,7 +58,14 @@
     <!-- 🧠 Question area -->
     <div class="question-box text-center">
         <h2 class="mb-4">Codequizz 🧠</h2>
-        <p><strong>Thème :</strong> {{ question.theme }} &nbsp; | &nbsp; <strong>ID :</strong> {{ question.ID }}</p>
+        <p class="d-flex align-items-center justify-content-center gap-2">
+          <span><strong>Thème :</strong> {{ question.theme }}</span>
+          <span>|</span>
+          <span><strong>ID :</strong> {{ question.ID }}</span>
+          <button id="flag-btn" class="btn btn-sm btn-outline-danger ms-2" title="Signaler un problème sur cette question">
+            ⚑ Signaler
+          </button>
+        </p>
 
         <h4 class="mt-4">
             {% if question.theme == "Panneaux de signalisation" %}
@@ -107,6 +116,94 @@
     </div>
 </div>
 
+<!-- Helper to make SweetAlert draggable -->
+<script>
+  // Robust draggable SweetAlert (mouse + touch)
+  function makeSwalDraggable() {
+    // Use SweetAlert2 API to get the current elements
+    const popup = (Swal && Swal.getPopup) ? Swal.getPopup() : document.querySelector('.swal2-popup');
+    if (!popup) return;
+
+    const handle = popup.querySelector('.swal2-title') || popup; // drag by title if present
+    handle.style.cursor = 'grab';
+    handle.style.userSelect = 'none';
+
+    let startX, startY, origLeft, origTop, dragging = false;
+
+    function startDrag(clientX, clientY) {
+      dragging = true;
+
+      const rect = popup.getBoundingClientRect();
+      // Switch from centered transform to fixed positioning
+      popup.style.position = 'fixed';
+      popup.style.margin = '0';
+      popup.style.transform = 'none';
+      popup.style.left = rect.left + 'px';
+      popup.style.top  = rect.top  + 'px';
+
+      startX = clientX;
+      startY = clientY;
+      origLeft = rect.left;
+      origTop  = rect.top;
+
+      document.addEventListener('mousemove', onMouseMove);
+      document.addEventListener('mouseup', stopDrag, { once: true });
+      document.addEventListener('touchmove', onTouchMove, { passive: false });
+      document.addEventListener('touchend', stopDrag, { once: true });
+    }
+
+    function onMouseDown(e) {
+      if (e.button !== 0) return; // left-click only
+      e.preventDefault();
+      startDrag(e.clientX, e.clientY);
+    }
+
+    function onTouchStart(e) {
+      const t = e.touches && e.touches[0];
+      if (!t) return;
+      e.preventDefault();
+      startDrag(t.clientX, t.clientY);
+    }
+
+    function moveTo(clientX, clientY) {
+      if (!dragging) return;
+      const dx = clientX - startX;
+      const dy = clientY - startY;
+
+      let left = origLeft + dx;
+      let top  = origTop  + dy;
+
+      // Keep inside viewport
+      const pad = 8;
+      const vw = window.innerWidth, vh = window.innerHeight;
+      const r = popup.getBoundingClientRect();
+      left = Math.max(pad, Math.min(left, vw - r.width  - pad));
+      top  = Math.max(pad, Math.min(top,  vh - r.height - pad));
+
+      popup.style.left = left + 'px';
+      popup.style.top  = top  + 'px';
+    }
+
+    function onMouseMove(e) { moveTo(e.clientX, e.clientY); }
+    function onTouchMove(e) {
+      const t = e.touches && e.touches[0];
+      if (!t) return;
+      e.preventDefault();
+      moveTo(t.clientX, t.clientY);
+    }
+
+    function stopDrag() {
+      dragging = false;
+      document.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('touchmove', onTouchMove);
+    }
+
+    handle.addEventListener('mousedown', onMouseDown);
+    handle.addEventListener('touchstart', onTouchStart, { passive: false });
+  }
+</script>
+
+
 <!-- Existing quiz JS logic -->
 <script>
     const confirmBtn = document.getElementById('confirm-btn');
@@ -115,8 +212,55 @@
     const explanation = `{{ question.explication | e }}`.trim();
     const questionId = "{{ question.ID }}";
     const theme = "{{ question.theme }}";
+    // Mode value for the request (fallback to "free" if not provided by the route)
+    const mode = "{{ mode|default('free') }}";
 
     let selectedAnswers = [];
+
+    // --- Flag button: ask for a comment, send to /flag-question
+    const flagBtn = document.getElementById('flag-btn');
+    if (flagBtn) {
+      flagBtn.addEventListener('click', async () => {
+        const { value: comment } = await Swal.fire({
+          title: 'Signaler cette question',
+          input: 'textarea',
+          inputLabel: 'Expliquez ce qui ne va pas',
+          inputPlaceholder: 'Ex: mauvaise bonne réponse, image absente, énoncé peu clair…',
+          inputAttributes: { 'aria-label': 'Commentaire' },
+          inputAutoTrim: true,
+          showCancelButton: true,
+          confirmButtonText: 'Envoyer',
+          cancelButtonText: 'Annuler',
+          preConfirm: (val) => {
+            if (!val || val.trim().length < 3) {
+              Swal.showValidationMessage('Merci de décrire le problème (3 caractères min).');
+              return false;
+            }
+            return val.trim();
+          }
+        });
+
+        if (!comment) return;
+
+        try {
+          const res = await fetch('/flag-question', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              question_id: questionId,
+              comment,
+              mode,
+              theme
+            })
+          });
+          const data = await res.json().catch(() => ({}));
+          if (!res.ok || !data.ok) throw new Error(data.error || 'Erreur');
+          Swal.fire({ icon: 'success', title: 'Merci 🙏', text: 'Signalement envoyé.' });
+        } catch (err) {
+          Swal.fire({ icon: 'error', title: 'Oups', text: "Impossible d'envoyer le signalement pour le moment." });
+        }
+      });
+    }
 
     answerInputs.forEach(input => {
         input.addEventListener('change', () => {
@@ -172,9 +316,10 @@
                 confirmButtonText: 'Continuer',
                 didOpen: () => {
                     const tooltipTrigger = document.getElementById('info-tooltip');
-                    if (tooltipTrigger) {
-                        new bootstrap.Tooltip(tooltipTrigger);
-                    }
+                    if (tooltipTrigger) new bootstrap.Tooltip(tooltipTrigger);
+
+                    // 👇 make the popup draggable
+                    makeSwalDraggable();
                 }
             }).then(() => {
                 window.location.href = "/quiz";
