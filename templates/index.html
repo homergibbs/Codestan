@@ -39,6 +39,16 @@
         }
         /* cursor hint when dragging the SweetAlert title */
         .swal2-title { cursor: grab; user-select: none; -webkit-user-select: none; }
+
+        /* Wider, multiline, left-aligned tooltip for explanations */
+        .tooltip.exp-tooltip .tooltip-inner{
+          max-width: 480px;      /* wider than default */
+          white-space: normal;   /* allow wrapping */
+          text-align: left;
+          padding: 12px 14px;
+          font-size: .95rem;
+          line-height: 1.4;
+        }
     </style>
 </head>
 <body>
@@ -120,7 +130,6 @@
 <script>
   // Robust draggable SweetAlert (mouse + touch)
   function makeSwalDraggable() {
-    // Use SweetAlert2 API to get the current elements
     const popup = (Swal && Swal.getPopup) ? Swal.getPopup() : document.querySelector('.swal2-popup');
     if (!popup) return;
 
@@ -202,7 +211,6 @@
     handle.addEventListener('touchstart', onTouchStart, { passive: false });
   }
 </script>
-
 
 <!-- Existing quiz JS logic -->
 <script>
@@ -308,17 +316,35 @@
                     <br><br>
                     <span id="info-tooltip"
                           style="cursor: help; color: #007bff;"
-                          data-bs-toggle="tooltip"
-                          title="${explanation || "Pas d'explications disponibles pour cette question"}">
+                          data-bs-toggle="tooltip">
                           ℹ️ Voir l’explication
                     </span>
                 `,
                 confirmButtonText: 'Continuer',
                 didOpen: () => {
-                    const tooltipTrigger = document.getElementById('info-tooltip');
-                    if (tooltipTrigger) new bootstrap.Tooltip(tooltipTrigger);
+                    // Build a nicer, wider tooltip with HTML + line breaks
+                    const el = document.getElementById('info-tooltip');
+                    if (el) {
+                      const htmlExplanation = (explanation && explanation.length)
+                        ? explanation.replace(/\n/g, '<br>')
+                        : "Pas d'explications disponibles pour cette question";
 
-                    // 👇 make the popup draggable
+                      // Ensure Bootstrap handles it as HTML
+                      el.removeAttribute('title');
+                      el.setAttribute('data-bs-html', 'true');
+                      el.setAttribute('data-bs-title', htmlExplanation);
+
+                      new bootstrap.Tooltip(el, {
+                        html: true,
+                        customClass: 'exp-tooltip',
+                        container: 'body',
+                        placement: 'auto',
+                        trigger: 'hover focus',
+                        boundary: 'window'
+                      });
+                    }
+
+                    // make the popup draggable
                     makeSwalDraggable();
                 }
             }).then(() => {

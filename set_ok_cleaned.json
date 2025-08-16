@@ -297,12 +297,12 @@
     "question": "QCM : Quelle est la signification du terme \"voie de décélération\" sur une route ?",
     "answers": {
       "correct": [
-        "Une voie de décélération est une voie réservée pour ralentir et se diriger vers une sortie ou une bifurcation"
+        "Voie réservée pour ralentir et se diriger vers une sortie ou une bifurcation"
       ],
       "wrong": [
-        "Une voie de décélération est une voie où la vitesse est limitée à 110 km/h",
-        "Une voie de décélération est une voie réservée aux véhicules prioritaires",
-        "Une voie de décélération est une voie réservée aux véhicules munis d'une remorque"
+        "Voie où la vitesse est limitée à 110 km/h",
+        "Voie réservée aux véhicules prioritaires",
+        "Voie réservée aux véhicules munis d'une remorque"
       ]
     },
     "explication": "Une voie de décélération est une partie de la route qui permet aux conducteurs de ralentir progressivement et de se diriger vers une sortie ou une bifurcation sans gêner la circulation sur les voies principales.",
@@ -661,7 +661,7 @@
   {
     "ID": "PDF93BIB146",
     "theme": "Notions diverses",
-    "question": "De manière générale, les zones fréquentées par des enfants, des personnes âgées ou des personnes handicapées  ?",
+    "question": "De manière générale, les zones fréquentées par des enfants, des personnes âgées ou des personnes handicapées sont signalées par ?",
     "answers": {
       "correct": [
         "Par un panneau"
@@ -701,8 +701,7 @@
       "wrong": [
         "Fin de zone à stationnement unilatéral à alternance semi-mensuelle, avec contrôle par disque",
         "Entrée dans une zone à stationnement unilatéral sans alternance semi-mensuelle, avec contrôle par disque",
-        "Entrée dans une zone à stationnement réservé aux riverains",
-        ""
+        "Entrée dans une zone à stationnement réservé aux riverains"
       ]
     },
     "explication": "",
@@ -1055,8 +1054,7 @@
       ],
       "wrong": [
         "les enfants",
-        "les personnes handicapées",
-        ""
+        "les personnes handicapées"
       ]
     },
     "explication": "",
@@ -1780,7 +1778,7 @@
   {
     "ID": "FREE005",
     "theme": "Notions diverses",
-    "question": "Que devez-vous faire avant de quitter votre véhicule stationné en dehors d'une zone prévue à cet effet ?",
+    "question": "Que devez-vous faire avant de laisser votre véhicule stationné en dehors d'une zone prévue à cet effet ?",
     "answers": {
       "correct": [
         "Couper le moteur",
@@ -2220,7 +2218,7 @@
   {
     "ID": "QCM105",
     "theme": "Notions diverses",
-    "question": "Déjà titulaire du permis, je suis atteint d’une maladie qui me rend inapte à la conduite. Je peux conduire :",
+    "question": "Déjà titulaire du permis, je suis atteint d’une maladie qui est susceptible de me rendre inapte à la conduite. Je peux conduire uniquement :",
     "answers": {
       "correct": [
         "Après avoir consulté un médecin agréé par la préfécture"
@@ -2242,7 +2240,7 @@
   {
     "ID": "QCM02",
     "theme": "Les autres usagers",
-    "question": "Les colisions avec des tramways impliquent majoritairement",
+    "question": "Les collisions avec des tramways impliquent majoritairement",
     "answers": {
       "correct": [
         "Des véhicules légers"
