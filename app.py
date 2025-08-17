@@ -8,11 +8,9 @@ from models import Base, User
 from sqlalchemy.exc import IntegrityError
 from dotenv import load_dotenv
 from models import Flag
-import json
-import random, hashlib
-import os
+import random, hashlib, json
+import os, re
 import secrets
-import re
 from models import Flag
 
 
@@ -169,6 +167,63 @@ def pick_next_in_cycle(user_data: dict, eligible_ids: list, mode: str, theme: st
 
     return pool["remaining"].pop()
 
+def email_to_id(email: str) -> str:
+    return re.sub(r'[^a-z0-9]+', '_', (email or '').lower()).strip('_')
+
+def build_user_json_from_db_row(u: "User") -> dict:
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    created = (u.created_at or datetime.now()).strftime("%Y-%m-%d %H:%M:%S")
+    return {
+        "email": u.email,
+        "name": u.name or (u.avatar_name or email_to_id(u.email)),
+        "avatar_name": u.avatar_name or "",
+        "avatar": u.avatar or "default.png",
+        "password_hash": u.password_hash or "",
+        "secret_question": u.secret_question or "",
+        "secret_answer_hash": u.secret_answer_hash or "",
+        "created_at": created,
+        "last_login": now,
+
+        "score": int(u.score or 0),
+        "current_streak": int(u.current_streak or 0),
+        "best_streak": int(u.best_streak or 0),
+        "total_answered": int(u.total_answered or 0),
+        "total_correct": int(u.total_correct or 0),
+        "total_wrong": int(u.total_wrong or 0),
+        "success_rate_overall": float(u.success_rate_overall or 0.0),
+        "time_spent_minutes": int(u.time_spent_minutes or 0),
+
+        "daily_stats": u.daily_stats or {},
+        "monthly_stats": u.monthly_stats or {},
+        "theme_stats": u.theme_stats or {},
+        "best_theme": u.best_theme,
+        "worst_theme": u.worst_theme,
+        "incorrect_questions": u.incorrect_questions or [],
+
+        "login_streak": u.login_streak or {"last_date": None, "count": 0, "best": 0},
+
+        # needed by your no-repeat logic
+        "quiz_rotation": {"pool": [], "seen": []},
+    }
+
+def ensure_user_json(email: str) -> str | None:
+    """Create users/<id>.json from the DB row if it doesn't exist."""
+    os.makedirs(USER_DIR, exist_ok=True)
+    fid = email_to_id(email)
+    user_file = os.path.join(USER_DIR, f"{fid}.json")
+    if os.path.exists(user_file):
+        return user_file
+
+    with SessionLocal() as db:
+        u = db.query(User).filter(User.email == email).first()
+        if not u:
+            return None
+        data = build_user_json_from_db_row(u)
+
+    with open(user_file, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    return user_file
+
 # --- Question Logic ---
 with open(QUESTION_FILE, "r", encoding="utf-8") as f:
     questions = json.load(f)
@@ -223,56 +278,66 @@ def login_email():
 
     # Consistent filename key from email (matches your existing JSON filenames)
     def email_to_key(e: str) -> str:
-        return e.replace("@", "_").replace(".", "_")
+        return e.replace("@", "_").replace(".", "_").lower().strip("_")
 
     user_key = email_to_key(email)
     user_file = os.path.join(USER_DIR, f"{user_key}.json")
 
-    # ----- Load (or create) the JSON profile -----
+    # ----- Load (or create) the JSON profile from the DB row if missing -----
     if os.path.exists(user_file):
         with open(user_file, "r", encoding="utf-8") as f:
             user_data = json.load(f)
     else:
-        # If the JSON is missing, bootstrap it from the DB row so the rest of your app keeps working
+        # Bootstrap JSON from DB so the rest of the app (still reading JSON) works
+        created_at = (db_row.created_at or datetime.utcnow()).strftime("%Y-%m-%d %H:%M:%S")
         user_data = {
             "email": db_row.email,
-            "name": db_row.name or db_row.avatar_name or "user",
-            "avatar_name": db_row.avatar_name,
-            "avatar": db_row.avatar,
-            "password_hash": db_row.password_hash,
-            "secret_question": db_row.secret_question,
-            "secret_answer_hash": db_row.secret_answer_hash,
-            "created_at": (db_row.created_at or datetime.utcnow()).strftime("%Y-%m-%d %H:%M:%S"),
+            "name": db_row.name or db_row.avatar_name or user_key,
+            "avatar_name": db_row.avatar_name or "",
+            "avatar": db_row.avatar or "default.png",
+            "password_hash": db_row.password_hash or "",
+            "secret_question": db_row.secret_question or "",
+            "secret_answer_hash": db_row.secret_answer_hash or "",
+            "created_at": created_at,
             "last_login": None,
-            "score": db_row.score or 0,
-            "current_streak": db_row.current_streak or 0,
-            "best_streak": db_row.best_streak or 0,
-            "total_answered": db_row.total_answered or 0,
-            "total_correct": db_row.total_correct or 0,
-            "total_wrong": db_row.total_wrong or 0,
+
+            # aggregates
+            "score": int(db_row.score or 0),
+            "current_streak": int(db_row.current_streak or 0),
+            "best_streak": int(db_row.best_streak or 0),
+            "total_answered": int(db_row.total_answered or 0),
+            "total_correct": int(db_row.total_correct or 0),
+            "total_wrong": int(db_row.total_wrong or 0),
             "success_rate_overall": float(db_row.success_rate_overall or 0.0),
-            "time_spent_minutes": db_row.time_spent_minutes or 0,
+            "time_spent_minutes": int(db_row.time_spent_minutes or 0),
+
+            # structured
             "daily_stats": db_row.daily_stats or {},
             "monthly_stats": db_row.monthly_stats or {},
             "theme_stats": db_row.theme_stats or {},
             "best_theme": db_row.best_theme,
             "worst_theme": db_row.worst_theme,
             "incorrect_questions": db_row.incorrect_questions or [],
-            "login_streak": db_row.login_streak or {},
+
+            # streak object
+            "login_streak": db_row.login_streak or {"last_date": None, "count": 0, "best": 0},
+
+            # monetization placeholders
             "free_forever": bool(db_row.free_forever),
             "plan": db_row.plan or "free",
-            "quota_used": db_row.quota_used or 0,
+            "quota_used": int(db_row.quota_used or 0),
+
+            # rotation state used by the no-repeat question picker
+            "quiz_rotation": {"pool": [], "seen": []},
         }
 
-    # ----- Set session (unchanged logic) -----
-    session["user"] = user_key
+    # ----- Set session -----
+    session["user_email"] = email          # real email (for DB / helpers)
+    session["user"] = user_key             # legacy file id used across the app
     session.permanent = True
     session["last_seen"] = datetime.now(timezone.utc).isoformat()
 
-    # We DO NOT update the login streak here anymore.
-    # It increments only on the first answered question of the day in /submit-answer.
-
-    # Update last_login in JSON
+    # Update last_login in JSON (UTC string)
     now_utc = datetime.now(timezone.utc)
     user_data["last_login"] = now_utc.strftime("%Y-%m-%d %H:%M:%S")
     with open(user_file, "w", encoding="utf-8") as f:
@@ -688,25 +753,46 @@ def login():
 @app.route("/profile")
 @login_required
 def profile():
+    # must have both for legacy filename + DB-backed email
     if "user" not in session:
         return redirect(url_for("home"))
 
-    user_file = os.path.join(USER_DIR, f"{session['user']}.json")
-    with open(user_file, "r", encoding="utf-8") as f:
-        user_data = json.load(f)
+    # 🔐 Make sure the JSON exists for this user (creates from DB if missing)
+    if "user_email" in session:
+        ensure_user_json(session["user_email"])
 
-    # Finalize active session before showing page
+    user_file = os.path.join(USER_DIR, f"{session['user']}.json")
+
+    # Open JSON (retry once by re-ensuring if somehow missing)
+    try:
+        with open(user_file, "r", encoding="utf-8") as f:
+            user_data = json.load(f)
+    except FileNotFoundError:
+        if "user_email" in session:
+            ensure_user_json(session["user_email"])
+        with open(user_file, "r", encoding="utf-8") as f:
+            user_data = json.load(f)
+
+    # ✅ Finalize current session time before showing page
     finalize_active_session(user_data)
 
+    # Push latest stats/time to the DB (keeps Postgres in sync)
+    try:
+        sync_user_to_db_from_json(user_data)
+    except Exception:
+        # don't block UI if sync fails
+        pass
+
+    # Save JSON back
     with open(user_file, "w", encoding="utf-8") as f:
         json.dump(user_data, f, indent=2, ensure_ascii=False)
 
+    # Avatar choices
     avatar_dir = os.path.join("static", "avatars")
     avatars = [f for f in os.listdir(avatar_dir) if f.lower().endswith(".png")]
     avatars.sort()
 
     return render_template("profile.html", user_data=user_data, avatars=avatars)
-
 @app.route("/stats")
 @login_required
 def stats():
