@@ -41,6 +41,8 @@ INACTIVITY_TIMEOUT = timedelta(minutes=30)
 # --- Paths and constants ---
 QUESTION_FILE = "set_ok_cleaned.json"
 USER_DIR = "users"
+# make sure the users/ directory exists both locally and on Render
+os.makedirs(USER_DIR, exist_ok=True)
 
 # --- Utility functions ---
 def login_required(view_func):
@@ -202,9 +204,10 @@ def build_user_json_from_db_row(u: "User") -> dict:
 
         "login_streak": u.login_streak or {"last_date": None, "count": 0, "best": 0},
 
-        # needed by your no-repeat logic
-        "quiz_rotation": {"pool": [], "seen": []},
+        # used by the no-repeat question picker
+        "question_rotation": {},
     }
+
 
 def ensure_user_json(email: str) -> str | None:
     """Create users/<id>.json from the DB row if it doesn't exist."""
@@ -288,7 +291,6 @@ def login_email():
         with open(user_file, "r", encoding="utf-8") as f:
             user_data = json.load(f)
     else:
-        # Bootstrap JSON from DB so the rest of the app (still reading JSON) works
         created_at = (db_row.created_at or datetime.utcnow()).strftime("%Y-%m-%d %H:%M:%S")
         user_data = {
             "email": db_row.email,
@@ -327,15 +329,18 @@ def login_email():
             "plan": db_row.plan or "free",
             "quota_used": int(db_row.quota_used or 0),
 
-            # rotation state used by the no-repeat question picker
-            "quiz_rotation": {"pool": [], "seen": []},
+            # used by the no-repeat picker (aligns with pick_next_in_cycle)
+            "question_rotation": {},
         }
 
     # ----- Set session -----
-    session["user_email"] = email          # real email (for DB / helpers)
-    session["user"] = user_key             # legacy file id used across the app
+    session["user_email"] = email
+    session["user"] = user_key
     session.permanent = True
     session["last_seen"] = datetime.now(timezone.utc).isoformat()
+
+    # ✅ ensure folder exists before writing (fixes Render 500 when 'users/' is missing)
+    os.makedirs(USER_DIR, exist_ok=True)
 
     # Update last_login in JSON (UTC string)
     now_utc = datetime.now(timezone.utc)
@@ -579,60 +584,38 @@ def home():
     known_users = get_known_users()
 
     if "user" in session:
+        # Ensure the per-user JSON exists (esp. on fresh deploys / new users)
+        if "user_email" in session:
+            ensure_user_json(session["user_email"])
+
         user_file = os.path.join(USER_DIR, f"{session['user']}.json")
         if os.path.exists(user_file):
             with open(user_file, "r", encoding="utf-8") as f:
                 user_data = json.load(f)
 
-            # ✅ Login streak logic
-            today = datetime.now().date()
-            yesterday = today - timedelta(days=1)
-
-            streak = user_data.get("login_streak", {
-                "last_date": None,
-                "count": 0,
-                "best": 0
-            })
-
-            last_date_str = streak.get("last_date")
-            last_date = datetime.strptime(last_date_str, "%Y-%m-%d").date() if last_date_str else None
-
-            if last_date == today:
-                pass  # Already counted today
-            elif last_date == yesterday:
-                streak["count"] += 1
-            else:
-                streak["count"] = 1
-
-            streak["best"] = max(streak.get("best", 0), streak["count"])
-            streak["last_date"] = today.isoformat()
-            user_data["login_streak"] = streak
-
-            # ✅ Finalize Codestan session
+            # ✅ Do NOT update login_streak here.
+            # Only finalize time tracking for any active quiz session.
             finalize_active_session(user_data)
 
             with open(user_file, "w", encoding="utf-8") as f:
                 json.dump(user_data, f, indent=2, ensure_ascii=False)
 
+    # Build leaderboard from local JSONs (unchanged)
     top_users = []
-
-    for username in get_known_users():
+    for username in known_users:
         path = os.path.join(USER_DIR, f"{username}.json")
         if not os.path.exists(path):
             continue
-
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
-
         top_users.append({
-            "name": data["name"],
+            "name": data.get("name", username),
             "avatar": data.get("avatar", "default.png"),
-            "score": data.get("score", 0),
-            "best_streak": data.get("best_streak", 0),
-            "login_streak": data.get("login_streak", {}).get("best", 0)
+            "score": int(data.get("score", 0)),
+            "best_streak": int(data.get("best_streak", 0)),
+            "login_streak": int(data.get("login_streak", {}).get("best", 0)),
         })
 
-    # Get top 1 for each category
     top_score = max(top_users, key=lambda u: u["score"], default=None)
     top_streak = max(top_users, key=lambda u: u["best_streak"], default=None)
     top_login = max(top_users, key=lambda u: u["login_streak"], default=None)
@@ -644,7 +627,6 @@ def home():
         top_streak=top_streak,
         top_login=top_login
     )
-
 
 # --- Check name: existing or new user ---
 @app.route("/check-user", methods=["POST"])
